@@ -51,7 +51,14 @@ export const navigation: NavigationItem[] = [
       { href: '/resources/#support', label: '技术支持' },
     ] }],
   },
-  { href: '/community/', label: '开源社区' },
+  {
+    href: '/community/',
+    label: '开源社区',
+    overview: '社区总览',
+    groups: [{ links: [
+      { href: '/community/mfcp/', label: 'MFCP' },
+    ] }],
+  },
   {
     href: '/about/',
     label: '关于我们',

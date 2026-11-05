@@ -1,0 +1,29 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeading from '../../components/PageHeading.astro';
+import { withBase } from '../../utils/paths';
+
+const entry = (await getEntry('pages', 'mfcp'))!;
+const page = entry.data;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={page.title} description={page.description}>
+  <PageHeading title={page.heading!} description={page.description} />
+  <div class="container section industry-detail mfcp-detail">
+    <Content />
+    <div><a class="button button-secondary" href={withBase('/community/')}>返回开源社区</a></div>
+  </div>
+</BaseLayout>
+
+<style>
+  .mfcp-detail :global(.detail-section) { color: var(--color-muted); }
+  .mfcp-detail :global(h2), .mfcp-detail :global(strong) { color: var(--color-text); }
+  .mfcp-detail :global(.detail-section > :not(h2) + *) { margin-top: 1rem; }
+  .mfcp-detail :global(ul), .mfcp-detail :global(ol) { margin: 0; padding-left: 1.5rem; }
+  .mfcp-detail :global(li + li) { margin-top: .6rem; }
+  .mfcp-detail :global(.detail-section a) { color: var(--color-blue); text-decoration: underline; text-underline-offset: .25rem; }
+  .mfcp-detail :global(.detail-section a:hover) { color: var(--color-accent); }
+  .mfcp-detail :global(code) { font-family: var(--font-mono); font-size: .9em; }
+</style>
