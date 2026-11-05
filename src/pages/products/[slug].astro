@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeading from '../../components/PageHeading.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products');
+  return products.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+type Props = {
+  entry: CollectionEntry<'products'>;
+};
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const product = entry.data;
+---
+
+<BaseLayout title={`${product.title}｜进程使命`} description={product.summary}>
+  <PageHeading title={product.title} description={product.summary} />
+  <div class="container section industry-detail">
+    <Content />
+
+    <div><a class="button button-secondary" href="/products/">返回产品与平台总览</a></div>
+  </div>
+</BaseLayout>
+
+<style>
+  .industry-detail :global(.detail-list > ul) { margin: 0; padding-left: 0; }
+  .industry-detail :global(.related-links a) { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-blue); text-decoration: underline; text-underline-offset: .25rem; }
+  .industry-detail :global(.related-links a:hover) { color: var(--color-accent); }
+</style>

@@ -1,0 +1,39 @@
+---
+import { navigation } from '../data/navigation';
+
+interface Props {
+  currentPath: string;
+  variant: 'desktop' | 'mobile';
+}
+
+const { currentPath, variant } = Astro.props;
+---
+
+<ul class="navigation-items">
+  {navigation.map(({ href, label, overview, groups }) => (
+    <li>
+      {groups ? (
+        <details class="navigation-disclosure" name={`${variant}-sections`}>
+          <summary class="nav-link" aria-current={currentPath.startsWith(href) ? 'location' : undefined}>
+            {label}<span class="navigation-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class:list={['navigation-panel', { 'navigation-panel-products': href === '/products/' }]}>
+            <a class="nav-link navigation-overview" href={href} aria-current={currentPath === href ? 'page' : undefined}>{overview}</a>
+            {groups.map(({ label: groupLabel, links }) => (
+              <div class="navigation-group">
+                {groupLabel && <p class="navigation-group-label">{groupLabel}</p>}
+                <ul>
+                  {links.map((link) => (
+                    <li><a class="nav-link" href={link.href} aria-current={currentPath === link.href ? 'page' : undefined}>{link.label}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </details>
+      ) : (
+        <a class="nav-link" href={href} aria-current={currentPath === href ? 'page' : currentPath.startsWith(href) ? 'location' : undefined}>{label}</a>
+      )}
+    </li>
+  ))}
+</ul>

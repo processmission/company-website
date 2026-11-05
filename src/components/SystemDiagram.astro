@@ -1,0 +1,37 @@
+---
+import { diagram } from '../data/content';
+---
+
+<figure class="system-diagram" aria-labelledby="system-diagram-caption">
+  <figcaption id="system-diagram-caption" class="diagram-topline">
+    <span class="status-label"><span class="status-dot" aria-hidden="true"></span>{diagram.title}</span>
+    <span class="mono">{diagram.stack}</span>
+  </figcaption>
+  <div class="workload-row">
+    <div><span class="workload-dot accent-dot" aria-hidden="true"></span>{diagram.workloads[0]}</div>
+    <div><span class="workload-dot blue-dot" aria-hidden="true"></span>{diagram.workloads[1]}</div>
+  </div>
+  <div class="runtime-row">
+    <div class="runtime-card linux-card">
+      <span class="runtime-label">{diagram.runtimes[0].label}</span>
+      <strong>{diagram.runtimes[0].name}</strong>
+      <span class="runtime-description">{diagram.runtimes[0].description}</span>
+      <div class="runtime-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="runtime-connector" aria-hidden="true"><span>⇄</span></div>
+    <div class="runtime-card zephyr-card">
+      <span class="runtime-label">{diagram.runtimes[1].label}</span>
+      <strong>{diagram.runtimes[1].name}</strong>
+      <span class="runtime-description">{diagram.runtimes[1].description}</span>
+      <div class="runtime-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+  <div class="isolation-lines" aria-hidden="true"><span></span><span></span></div>
+  <div class="hypervisor-layer">
+    <span class="layer-icon" aria-hidden="true">▧</span>
+    <div><strong>{diagram.hypervisor.name}</strong><span>{diagram.hypervisor.description}</span></div>
+    <span class="layer-tag">{diagram.hypervisor.tag}</span>
+  </div>
+  <div class="hardware-layer"><span>{diagram.hardware}</span><span class="mono">{diagram.architectures}</span></div>
+  <p class="diagram-note">{diagram.note}</p>
+</figure>

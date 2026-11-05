@@ -1,0 +1,48 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeading from '../components/PageHeading.astro';
+import ContentPlaceholder from '../components/ContentPlaceholder.astro';
+import { community } from '../data/content';
+
+const entry = (await getEntry('pages', 'community'))!;
+const page = entry.data;
+const { Content: Introduction } = await render(entry);
+---
+
+<BaseLayout
+  title={`开源社区 · ${community.name}｜进程使命`}
+  description={community.description}
+>
+  <PageHeading eyebrow={community.name} title={page.heading!} description={community.description} />
+  <section class="section community-section" aria-labelledby="community-title">
+    <div class="container">
+      <div class="community-panel">
+        <div class="community-copy">
+          <Introduction />
+        </div>
+        <div class="community-visual" aria-label="开源社区的技术与工程连接">
+          <span class="community-label mono">{page.visualLabel}</span>
+          <div class="community-core"><span class="core-corner" aria-hidden="true"></span><strong>{community.name}</strong><span>{community.positioning}</span></div>
+          <div class="community-orbit" aria-hidden="true"></div>
+          <div class="community-tags">{page.tags.map((tag) => <span>{tag}</span>)}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {page.sections.map((section) => (
+    <section id={section.id} class="section" aria-labelledby={`${section.id}-title`}>
+      <div class="container">
+        <div class="section-heading">
+          <h2 id={`${section.id}-title`}>{section.title}</h2>
+        </div>
+        {section.items.map((item) => <ContentPlaceholder {...item} />)}
+      </div>
+    </section>
+  ))}
+</BaseLayout>
+
+<style>
+  .community-core { width: 228px; max-width: calc(100% - 1rem); min-height: 164px; }
+  .community-core > span:not(.core-corner) { text-wrap: balance; }
+</style>

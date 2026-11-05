@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  needed: string;
+  id?: string;
+}
+
+const { title, needed, id } = Astro.props;
+---
+
+<article id={id} class="content-placeholder">
+  <h3>{title}</h3>
+  <p>需要补充更多内容：{needed}。</p>
+</article>
+
+<style>
+  .content-placeholder { min-width: 0; padding: 1.5rem; border: 1px solid var(--color-border); border-radius: .75rem; background: var(--color-surface); scroll-margin-top: 1rem; overflow-wrap: anywhere; }
+  h3 { font-size: 1.125rem; color: var(--color-blue); }
+  p { margin-top: .75rem; font-size: 1rem; color: var(--color-muted); }
+</style>

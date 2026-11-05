@@ -1,0 +1,33 @@
+---
+import NavigationItems from './NavigationItems.astro';
+import '../styles/navigation.css';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header" transition:name="site-header" transition:animate="none">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="进程使命首页" aria-current={currentPath === '/' ? 'page' : undefined}>
+      <img
+        src="/company-logo.webp"
+        alt="进程使命 Process Mission"
+        width="1100"
+        height="211"
+        decoding="async"
+      />
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <NavigationItems currentPath={currentPath} variant="desktop" />
+    </nav>
+    <details class="mobile-navigation">
+      <summary>菜单 <span class="menu-icon" aria-hidden="true"><i></i><i></i></span></summary>
+      <nav aria-label="移动主导航">
+        <NavigationItems currentPath={currentPath} variant="mobile" />
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  import '../scripts/navigation';
+</script>

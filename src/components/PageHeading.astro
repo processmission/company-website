@@ -1,0 +1,21 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+}
+
+const { eyebrow, title, description } = Astro.props;
+---
+
+<header class="page-heading">
+  <div class="container">
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1>{title}</h1>
+    <slot name="description"><p class="section-description">{description}</p></slot>
+  </div>
+</header>
+
+<style>
+  .page-heading :global(.container > p) { max-width: 850px; margin-top: 1.4rem; color: var(--color-muted); font-size: var(--font-size-body); line-height: 1.9; }
+</style>

@@ -1,0 +1,36 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeading from '../components/PageHeading.astro';
+import SystemDiagram from '../components/SystemDiagram.astro';
+
+const entry = (await getEntry('pages', 'architecture'))!;
+const page = entry.data;
+const { Content: Chapters } = await render(entry);
+const { Content: Introduction } = await render((await getEntry('prose', 'architecture-intro'))!);
+const { Content: Overview } = await render((await getEntry('prose', 'architecture-overview'))!);
+---
+
+<BaseLayout title={page.title} description={page.description}>
+  <PageHeading eyebrow={page.eyebrow} title={page.heading!}>
+    <Introduction slot="description" />
+  </PageHeading>
+  <section class="section architecture-section" aria-labelledby="architecture-title">
+    <div class="container split-layout">
+      <div class="architecture-copy">
+        <Overview />
+      </div>
+      <SystemDiagram />
+    </div>
+  </section>
+  <div class="container section industry-detail architecture-chapters">
+    <Chapters />
+  </div>
+</BaseLayout>
+
+<style>
+  .architecture-chapters :global(.detail-section) { scroll-margin-top: 2rem; }
+  .architecture-chapters :global(.detail-section > ul) { margin: 1.25rem 0 0; padding-left: 1.25rem; color: var(--color-muted); }
+  .architecture-chapters :global(.detail-section > ul li + li) { margin-top: .6rem; }
+  .architecture-chapters :global(.chapter-links) { display: flex; flex-wrap: wrap; gap: 0 1.5rem; }
+</style>
