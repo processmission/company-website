@@ -1,15 +1,18 @@
 ---
 import NavigationItems from './NavigationItems.astro';
+import { withBase } from '../utils/paths';
 import '../styles/navigation.css';
 
-const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const pathname = Astro.url.pathname;
+const currentPath = pathname === base ? '/' : pathname.startsWith(`${base}/`) ? pathname.slice(base.length) : pathname;
 ---
 
 <header class="site-header" transition:name="site-header" transition:animate="none">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="进程使命首页" aria-current={currentPath === '/' ? 'page' : undefined}>
+    <a class="brand" href={withBase('/')} aria-label="进程使命首页" aria-current={currentPath === '/' ? 'page' : undefined}>
       <img
-        src="/company-logo.webp"
+        src={withBase('/company-logo.webp')}
         alt="进程使命 Process Mission"
         width="1100"
         height="211"

@@ -105,11 +105,11 @@ summary: "采集分区、Guest 与应用运行数据，在时序和资源约束�
 
 <div class="detail-list related-links">
 
-- [了解内核观测与跨层调度基础](/architecture/)
-- [查看分区调度与 Guest 管理](/products/hypervisor/)
-- [查看候选版本构建、部署与复测](/products/devops/)
-- [工业边缘的控制与现场通信时序](/industries/industrial/)
-- [航天星载的任务布局与时间预算](/industries/space/)
+- [了解内核观测与跨层调度基础](../../architecture/)
+- [查看分区调度与 Guest 管理](../../products/hypervisor/)
+- [查看候选版本构建、部署与复测](../../products/devops/)
+- [工业边缘的控制与现场通信时序](../../industries/industrial/)
+- [航天星载的任务布局与时间预算](../../industries/space/)
 
 </div>
 

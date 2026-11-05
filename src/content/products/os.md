@@ -107,9 +107,9 @@ summary: "按行业任务与目标硬件配置 Linux、Zephyr 及隔离环境，
 
 <div class="detail-list related-links">
 
-- [了解 Linux、Zephyr 与 Hypervisor 技术架构](/architecture/)
-- [查看独立 Hypervisor 产品](/products/hypervisor/)
-- [按行业查看操作系统方案](/industries/)
+- [了解 Linux、Zephyr 与 Hypervisor 技术架构](../../architecture/)
+- [查看独立 Hypervisor 产品](../../products/hypervisor/)
+- [按行业查看操作系统方案](../../industries/)
 
 </div>
 

@@ -105,10 +105,10 @@ DevOps 平台承接研发验证与部署运维流程，统一管理配置、工�
 
 <div class="detail-list related-links">
 
-- [了解运行系统与工程工具的连接](/architecture/)
-- [查看候选方案生成与调度优化](/products/scheduling/)
-- [查看版本化证据与安全论证](/products/safety-assurance/)
-- [具身机器人的双系统集成与验证](/industries/robotics/)
+- [了解运行系统与工程工具的连接](../../architecture/)
+- [查看候选方案生成与调度优化](../../products/scheduling/)
+- [查看版本化证据与安全论证](../../products/safety-assurance/)
+- [具身机器人的双系统集成与验证](../../industries/robotics/)
 
 </div>
 

@@ -1,5 +1,6 @@
 ---
 import { company, community, officialChannels, footer } from '../data/content';
+import { withBase } from '../utils/paths';
 
 const year = new Date().getFullYear();
 ---
@@ -14,31 +15,31 @@ const year = new Date().getFullYear();
       <section>
         <h2>产品与方案</h2>
         <ul>
-          <li><a href="/products/">产品与平台</a></li>
-          <li><a href="/industries/">行业方案</a></li>
-          <li><a href="/industries/#cases">客户案例与项目成果</a></li>
-          <li><a href="/architecture/">技术架构</a></li>
+          <li><a href={withBase('/products/')}>产品与平台</a></li>
+          <li><a href={withBase('/industries/')}>行业方案</a></li>
+          <li><a href={withBase('/industries/#cases')}>客户案例与项目成果</a></li>
+          <li><a href={withBase('/architecture/')}>技术架构</a></li>
         </ul>
       </section>
       <section>
         <h2>资料与社区</h2>
         <ul>
-          <li><a href="/resources/#product-materials">产品资料</a></li>
-          <li><a href="/resources/#docs">技术文档</a></li>
-          <li><a href="/resources/#videos">视频演示</a></li>
-          <li><a href="/resources/#faq">常见问题</a></li>
-          <li><a href="/resources/#support">技术支持</a></li>
-          <li><a href="/community/">{community.name} 开源社区</a></li>
+          <li><a href={withBase('/resources/#product-materials')}>产品资料</a></li>
+          <li><a href={withBase('/resources/#docs')}>技术文档</a></li>
+          <li><a href={withBase('/resources/#videos')}>视频演示</a></li>
+          <li><a href={withBase('/resources/#faq')}>常见问题</a></li>
+          <li><a href={withBase('/resources/#support')}>技术支持</a></li>
+          <li><a href={withBase('/community/')}>{community.name} 开源社区</a></li>
         </ul>
       </section>
       <section>
         <h2>联系与关注</h2>
-        <a href="/about/#contact">联系我们</a>
+        <a href={withBase('/about/#contact')}>联系我们</a>
         <p>需要补充更多内容：{footer.contactNeeded}。</p>
         <ul>
           {officialChannels.map((channel) => (
             <li>
-              <a href={`/about/#${channel.id}`}>{channel.title}</a>
+              <a href={withBase(`/about/#${channel.id}`)}>{channel.title}</a>
               <p>需要补充更多内容：{channel.needed}。</p>
             </li>
           ))}
@@ -47,11 +48,11 @@ const year = new Date().getFullYear();
       <section>
         <h2>公司信息</h2>
         <ul>
-          <li><a href="/about/">公司介绍</a></li>
-          <li><a href="/about/#news">公司动态</a></li>
-          <li><a href="/about/#careers">加入我们</a></li>
-          <li><a href="/about/#partners">合作伙伴</a></li>
-          <li><a href="/about/#qualifications">资质信息</a></li>
+          <li><a href={withBase('/about/')}>公司介绍</a></li>
+          <li><a href={withBase('/about/#news')}>公司动态</a></li>
+          <li><a href={withBase('/about/#careers')}>加入我们</a></li>
+          <li><a href={withBase('/about/#partners')}>合作伙伴</a></li>
+          <li><a href={withBase('/about/#qualifications')}>资质信息</a></li>
         </ul>
       </section>
     </nav>

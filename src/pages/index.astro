@@ -3,6 +3,7 @@ import { getEntry, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SystemDiagram from '../components/SystemDiagram.astro';
 import { company, diagram, industries, productGroups, products } from '../data/content';
+import { withBase } from '../utils/paths';
 
 const entry = (await getEntry('pages', 'index'))!;
 const page = entry.data;
@@ -16,7 +17,7 @@ const { Content: ProductIntroduction } = await render(productIntroduction);
 <BaseLayout>
   <section class="hero" aria-labelledby="hero-title">
     <div class="container hero-inner">
-      <a class="hero-badge" href="/architecture/">
+      <a class="hero-badge" href={withBase('/architecture/')}>
         <span class="badge-dot" aria-hidden="true"></span>
         {company.positioning}
         <span class="badge-separator" aria-hidden="true"></span>
@@ -25,7 +26,7 @@ const { Content: ProductIntroduction } = await render(productIntroduction);
       <Hero />
       <div class="hero-actions">
         {page.actions.map((action, index) => (
-          <a class={`button ${index === 0 ? 'button-primary' : 'button-secondary'}`} href={action.href}>{action.label}</a>
+          <a class={`button ${index === 0 ? 'button-primary' : 'button-secondary'}`} href={withBase(action.href)}>{action.label}</a>
         ))}
       </div>
       <div class="hero-stack" aria-label="核心技术组合">
@@ -37,7 +38,7 @@ const { Content: ProductIntroduction } = await render(productIntroduction);
         <p>{page.industryIntro}</p>
         <nav aria-label="行业场景快捷导航">
           {industries.map((industry) => (
-            <a href={`/industries/${industry.slug}/`}>{industry.title}</a>
+            <a href={withBase(`/industries/${industry.slug}/`)}>{industry.title}</a>
           ))}
         </nav>
       </div>
@@ -62,14 +63,14 @@ const { Content: ProductIntroduction } = await render(productIntroduction);
       </div>
       {productGroups.map((group) => (
         <section class="product-group" aria-labelledby={`overview-${group.id}`}>
-          <h3 id={`overview-${group.id}`}><a href={`/products/#${group.id}`}>{group.title}</a></h3>
+          <h3 id={`overview-${group.id}`}><a href={withBase(`/products/#${group.id}`)}>{group.title}</a></h3>
           <div class="product-grid">
             {products.filter((product) => product.group === group.title).map((product) => (
               <article class="product-card overview-card" aria-labelledby={`overview-product-${product.slug}`}>
                 <div class="card-topline"><span>{product.category}</span></div>
-                <h4 id={`overview-product-${product.slug}`}><a class="product-title-link" href={`/products/${product.slug}/`}>{product.title}</a></h4>
+                <h4 id={`overview-product-${product.slug}`}><a class="product-title-link" href={withBase(`/products/${product.slug}/`)}>{product.title}</a></h4>
                 <p>{product.description}</p>
-                <a class="text-link" href={`/products/${product.slug}/`}>查看产品</a>
+                <a class="text-link" href={withBase(`/products/${product.slug}/`)}>查看产品</a>
               </article>
             ))}
           </div>

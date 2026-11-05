@@ -107,11 +107,11 @@ Hypervisor 是独立的系统软件产品，用于混合关键任务部署与存
 
 <div class="detail-list related-links">
 
-- [了解分区与运行时技术架构](/architecture/#hypervisor)
-- [查看分区与 Guest 联合调度优化](/products/scheduling/)
-- [航空机载的分区与隔离应用](/industries/avionics/)
-- [智能汽车的混合部署与系统承接](/industries/automotive/)
-- [工业边缘的存量系统部署](/industries/industrial/)
+- [了解分区与运行时技术架构](../../architecture/#hypervisor)
+- [查看分区与 Guest 联合调度优化](../../products/scheduling/)
+- [航空机载的分区与隔离应用](../../industries/avionics/)
+- [智能汽车的混合部署与系统承接](../../industries/automotive/)
+- [工业边缘的存量系统部署](../../industries/industrial/)
 
 </div>
 

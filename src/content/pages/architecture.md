@@ -15,9 +15,9 @@ heading: 技术架构
 
 <p class="detail-boundary">裁剪、隔离和故障恢复需要结合目标硬件与配置验证；认证适用范围和证据要求由行业项目分别定义，不将 Linux 运行环境视为已获认证的完整系统。</p>
 <div class="chapter-links">
-  <a class="text-link" href="/products/os/">查看行业操作系统</a>
-  <a class="text-link" href="/products/devops/">查看构建与版本管理</a>
-  <a class="text-link" href="/products/safety-assurance/">查看认证工程与安全论证</a>
+  <a class="text-link" href="../products/os/">查看行业操作系统</a>
+  <a class="text-link" href="../products/devops/">查看构建与版本管理</a>
+  <a class="text-link" href="../products/safety-assurance/">查看认证工程与安全论证</a>
 </div>
 
 </section>
@@ -33,9 +33,9 @@ heading: 技术架构
 
 <p class="detail-boundary">迁移需核对项目所需接口与硬件行为；调度优化需检查采样开销，并用实机结果校准仿真模型、验证时序约束。</p>
 <div class="chapter-links">
-  <a class="text-link" href="/products/os/">查看行业操作系统</a>
-  <a class="text-link" href="/products/scheduling/">查看调度分析与配置优化</a>
-  <a class="text-link" href="/products/devops/">查看双系统构建与验证</a>
+  <a class="text-link" href="../products/os/">查看行业操作系统</a>
+  <a class="text-link" href="../products/scheduling/">查看调度分析与配置优化</a>
+  <a class="text-link" href="../products/devops/">查看双系统构建与验证</a>
 </div>
 
 </section>
@@ -51,8 +51,8 @@ heading: 技术架构
 
 <p class="detail-boundary">原镜像与驱动复用以指令架构兼容、虚拟硬件匹配为前提。内存、设备与中断隔离效果需结合目标 SoC、IOMMU 和分区配置验证。</p>
 <div class="chapter-links">
-  <a class="text-link" href="/products/hypervisor/">查看 Hypervisor 产品</a>
-  <a class="text-link" href="/products/scheduling/">查看分区与 Guest 联合优化</a>
+  <a class="text-link" href="../products/hypervisor/">查看 Hypervisor 产品</a>
+  <a class="text-link" href="../products/scheduling/">查看分区与 Guest 联合优化</a>
 </div>
 
 </section>

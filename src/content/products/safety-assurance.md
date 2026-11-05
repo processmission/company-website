@@ -106,10 +106,10 @@ summary: "关联需求、设计、系统配置与分析验证记录，形成版�
 
 <div class="detail-list related-links">
 
-- [了解需要纳入论证的系统与隔离边界](/architecture/)
-- [查看工程基线与验证记录管理](/products/devops/)
-- [航空机载的适航证据准备](/industries/avionics/)
-- [智能汽车的功能安全变更分析](/industries/automotive/)
+- [了解需要纳入论证的系统与隔离边界](../../architecture/)
+- [查看工程基线与验证记录管理](../../products/devops/)
+- [航空机载的适航证据准备](../../industries/avionics/)
+- [智能汽车的功能安全变更分析](../../industries/automotive/)
 
 </div>
 

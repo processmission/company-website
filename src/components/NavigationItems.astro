@@ -1,5 +1,6 @@
 ---
 import { navigation } from '../data/navigation';
+import { withBase } from '../utils/paths';
 
 interface Props {
   currentPath: string;
@@ -18,13 +19,13 @@ const { currentPath, variant } = Astro.props;
             {label}<span class="navigation-chevron" aria-hidden="true"></span>
           </summary>
           <div class:list={['navigation-panel', { 'navigation-panel-products': href === '/products/' }]}>
-            <a class="nav-link navigation-overview" href={href} aria-current={currentPath === href ? 'page' : undefined}>{overview}</a>
+            <a class="nav-link navigation-overview" href={withBase(href)} aria-current={currentPath === href ? 'page' : undefined}>{overview}</a>
             {groups.map(({ label: groupLabel, links }) => (
               <div class="navigation-group">
                 {groupLabel && <p class="navigation-group-label">{groupLabel}</p>}
                 <ul>
                   {links.map((link) => (
-                    <li><a class="nav-link" href={link.href} aria-current={currentPath === link.href ? 'page' : undefined}>{link.label}</a></li>
+                    <li><a class="nav-link" href={withBase(link.href)} aria-current={currentPath === link.href ? 'page' : undefined}>{link.label}</a></li>
                   ))}
                 </ul>
               </div>
@@ -32,7 +33,7 @@ const { currentPath, variant } = Astro.props;
           </div>
         </details>
       ) : (
-        <a class="nav-link" href={href} aria-current={currentPath === href ? 'page' : currentPath.startsWith(href) ? 'location' : undefined}>{label}</a>
+        <a class="nav-link" href={withBase(href)} aria-current={currentPath === href ? 'page' : currentPath.startsWith(href) ? 'location' : undefined}>{label}</a>
       )}
     </li>
   ))}
