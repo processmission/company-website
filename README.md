@@ -172,11 +172,35 @@ Desktop 下拉面板统一使用 `0.5rem` 外框内边距，条目占满所在�
 
 新增产品或行业时，复制同类 Markdown 文件并使用新的文件名作为 slug；文件名决定详情 URL，不再维护 TS 目录副本。`order` 决定目录顺序，产品 `group` 对应共享产品分组。行业 frontmatter 的 `recommendations` 使用产品文件名作为 `product`，并填写推荐理由；原生 `reference('products')` 与详情构建检查关联是否有效。推荐组合不作为硬件兼容性或认证清单。修改后运行 `npm run check` 和 `npm run build`。
 
+Markdown 正文中的站内链接使用相对路径，并按实际渲染页面计算：产品详情中的 `../../architecture/` 指向技术架构页，技术架构正文中的 `../products/os/` 指向产品详情。首页专用正文片段中的 `architecture/` 指向架构页。frontmatter 与菜单数据仍使用 `/products/` 等站内逻辑路径，由 Astro 模板通过 `src/utils/paths.ts` 的 `withBase` 加入部署前缀；不要在内容中写入 GitHub 仓库前缀。
+
 Astrotation 可继续批注渲染后的 Markdown 元素；源码位置可能指向承载内容的 `.astro` 模板，而不是 `.md` 的准确行号。定位正文时结合页面 URL、元素文字与对应 Markdown 文件。调整集合配置后重启开发服务；普通 Markdown 内容修改由开发服务同步更新。
 
 当前导航使用 `public/company-logo.webp` 透明深字红标版，反白版本另存于 `public/company-logo-reverse.webp`。两者均由公司介绍 PPT 中的原始 Logo 生成，保留原有比例和红色标记。装饰图形使用原生 CSS 绘制，不依赖第三方图片服务。
 
 公司事实依据 `进程使命介绍202609-完整.pptx` 正文第 1–33 页。行业详情依据第 17–21 页；工程平台依据第 22–24 页；技术专题与 Hypervisor 产品依据第 26–32 页。讨论稿、已废弃参考页、竞品评价和内部商业模式不作为官网内容。页面保留原文中的迁移前提、验证范围与安全边界，不把认证目标表述为已获认证。
+
+## 部署到 GitHub Pages
+
+`.github/workflows/deploy.yml` 在 push 到 `main` 或手动触发时运行。使用 GitHub 官方 Actions、`.nvmrc` 中的 Node.js 版本和 `npm ci` 安装依赖；路径检查、Astro 检查及静态构建成功后，只上传 `dist/` 并部署到 `github-pages` environment。不需要额外 secret，也不向源码分支写入构建产物。Action 版本固定到 commit SHA。
+
+- 仓库：`https://github.com/processmission/company-website`。
+- 默认访问地址：`https://processmission.github.io/company-website/`。
+- Pages Source：仓库 **Settings → Pages → Build and deployment → Source → GitHub Actions**。
+- 手动发布：**Actions → Deploy Astro to GitHub Pages → Run workflow**。只有 `main` 可以执行部署。
+
+构建从 `actions/configure-pages` 读取实际站点 origin 和 base path，分别传入 `SITE_URL`、`SITE_BASE`。默认本地开发和普通构建不设置这两个变量，仍使用根路径 `/`；GitHub Pages 构建使用 `/company-website/`，无需修改内容或为该平台绑定独立域名。
+
+在本地检查 GitHub Pages 构建：
+
+```sh
+node src/utils/paths.test.mjs
+npm run check
+SITE_URL=https://processmission.github.io SITE_BASE=/company-website npm run build
+SITE_URL=https://processmission.github.io SITE_BASE=/company-website npm run preview
+```
+
+打开 preview 地址下的 `/company-website/`。检查普通根路径部署时，不设置 `SITE_URL`、`SITE_BASE`，重新运行 `npm run build` 和 `npm run preview`。
 
 ## 部署到腾讯云 EdgeOne Makers
 
@@ -187,6 +211,8 @@ Astrotation 可继续批注渲染后的 Markdown 元素；源码位置可能指�
 - 安装命令：`npm ci`。
 - 构建命令：`npm run build`。
 - 输出目录：`dist`。
+
+EdgeOne Makers 使用普通根路径构建，不设置 GitHub Pages 的 `SITE_BASE`。独立域名确认后，在平台构建环境中将 `SITE_URL` 设置为真实域名的完整 HTTPS origin；页面、资源和 Markdown 链接不需要再次加入或移除仓库前缀。域名绑定与 DNS 在 EdgeOne Makers 配置，不使用 GitHub Pages 的 CNAME。
 
 发布资源仅使用 `dist/`，不要将公司介绍 PPT 放入 `public/` 或作为下载资源上传。若使用 Git 集成构建，应确认源仓库的访问权限；源仓库与公开的网站产物是不同的访问边界。
 
