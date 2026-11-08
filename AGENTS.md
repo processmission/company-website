@@ -78,13 +78,13 @@ Cache 回归：`node scripts/cache-release.test.mjs` 使用隔离的本地 HTTP/
 - 使用 Node.js `>=22.23.4`，优先采用 [.nvmrc](.nvmrc)；包管理器是 npm，依赖以 `package-lock.json` 为准。不要把 Bun、其他 lockfile 或新的 UI/动画/Markdown framework 当作现有工具链。
 - `SITE_URL` 和 `SITE_BASE` 由构建环境传入，配置读取 `process.env`；默认分别为未设置和 `/`。GitHub Pages workflow 从 Pages metadata 获取 origin/base；仅发布 `dist/`。
 - Cache 按环境和资源分类：开发 HTML 与 `/_image-live/` 图片使用 `no-store`，Vite 模块/版本化依赖保持原生策略；preview 的现有产物使用 `no-cache` 和原生 ETag。Astro 原生预路由错误及 preview 生成的 404 不提供这些额外响应头，不为此接入私有 API 或替换本地服务器。Logo、favicon 从 `src/assets/brand/` 导入；稳定许可证文件保留 `public/` URL。
-- `npm run build` 保持离线。构建后运行 `scripts/cache-release.mjs`，从已发布站点保留仍可能被旧 HTML 引用的资源 24 小时，继承过期时间不续期；首次迁移读取受限静态依赖图。准备后的产物一小时内才可发布，重复准备须重新 build。`dist/cache-assets.json` 是发布元数据，不是 HTTP 头配置；GitHub Pages 的生产缓存头仍由平台控制，脚本校验 HTML 缓存窗口不超过 600 秒。
+- `npm run build` 保持离线。CI 构建后运行 `scripts/cache-release.mjs`，从已发布站点保留仍可能被旧 HTML 引用的资源 24 小时，继承过期时间不续期；首次迁移读取受限静态依赖图。准备后的产物一小时内才可发布，重复准备须重新 build。`dist/cache-assets.json` 是发布元数据，不是 HTTP 头配置；GitHub Pages 的生产缓存头仍由平台控制，脚本校验 HTML 缓存窗口不超过 600 秒。
 - `node_modules/`、`dist/`、`.astro/`、`.npm-cache/`、`.astrotation/`、环境文件及日志是忽略内容，不作为源码提交。
 - Astrotation 仅用于 dev，MCP 在本机 `127.0.0.1:7133/mcp`，配置见 [.omp/mcp.json](.omp/mcp.json)。暴露 dev 只限可信 LAN/VPN；读取批注后按指令处理，不自动 watch。批注状态通过 MCP/网页修改，不直接编辑存储 JSON；源码位置可能指向模板而非 Markdown 行。
 
 ## Testing & QA
 
 - 自动化检查使用 `node:assert/strict`：`src/utils/paths.test.mjs` 覆盖路径，`src/utils/cache.test.mjs` 检查运行中的开发 HTTP 服务，`scripts/cache-release.test.mjs` 覆盖资源保留、过期与信任边界；没有额外测试框架或 coverage 阈值。
-- 代码/内容修改按影响运行相应测试、`npm run check` 和 `npm run build`；路径变化还需分别验证根路径与 Pages 子路径。CI 执行路径测试、check、build，但不是 PR 检查 workflow；只在 `main` 执行部署。
+- 代码/内容修改按影响运行相应测试、`npm run check` 和 `npm run build`；路径变化还需分别验证根路径与 Pages 子路径。CI 执行回归、开发 HTTP Cache 检查、check、build 和发布准备，但不是 PR 检查 workflow；只在 `main` 执行部署。
 - UI/导航变化用实际浏览器检查受影响页面、链接/锚点、当前栏目、desktop/mobile、键盘、连续切页和返回行为。构建通过不能替代浏览器验证；保留无 JS 导航和 reduced-motion 行为。
 - 仅文档修改检查内容、相对链接和命令即可；未运行的检查不得声称通过。新增测试针对可观察行为和真实边界，不为静态文案或简单转发引入测试框架。

@@ -18,6 +18,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      deploy-before: ${{ steps.cache.outputs.deploy-before }}
     permissions:
       contents: read
       pages: read
@@ -39,9 +41,21 @@ jobs:
       - name: Check source
         run: |
           node src/utils/paths.test.mjs
+          node scripts/cache-release.test.mjs
           npm run check
+      - name: Check development HTTP caching
+        run: |
+          trap 'npm run dev -- stop' EXIT
+          npm run dev -- --background --host 127.0.0.1 --port 4321
+          node src/utils/cache.test.mjs http://127.0.0.1:4321
       - name: Build static pages
         run: npm run build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}
+      - name: Prepare bounded cache assets
+        id: cache
+        run: node scripts/cache-release.mjs
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           SITE_BASE: ${{ steps.pages.outputs.base_path }}
@@ -54,6 +68,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       pages: write
       id-token: write
@@ -61,6 +76,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Refuse stale prepared artifacts
+        env:
+          DEPLOY_BEFORE: ${{ needs.build.outputs.deploy-before }}
+        run: |
+          if [[ ! "$DEPLOY_BEFORE" =~ ^[0-9]+$ ]] || (( ${#DEPLOY_BEFORE} > 12 )); then
+            echo "::error::Missing or invalid cache preparation deadline"
+            exit 1
+          fi
+          if (( $(date +%s) >= 10#$DEPLOY_BEFORE )); then
+            echo "::error::Prepared cache assets are stale; rebuild before deploying"
+            exit 1
+          fi
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
