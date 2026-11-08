@@ -26,6 +26,7 @@ description: 公司静态官网的架构、维护约定与验证入口
 | `src/data/` | collection 派生数据与共享导航配置，不维护重复正文 |
 | `src/pages/`、`src/layouts/`、`src/components/` | 静态路由、公共页面结构与展示组件 |
 | `src/styles/`、`src/scripts/` | 主题与导航样式、原生浏览器交互及生命周期 |
+| `src/config/`、`scripts/` | 可执行 Cache 契约、发布资源保留与原生 Node 回归检查 |
 | `public/` | 直接发布的静态资源；不要放入私有 PPT、凭据或内部资料 |
 
 ## Development Commands
@@ -52,6 +53,8 @@ SITE_URL=https://processmission.github.io SITE_BASE=/company-website npm run pre
 
 切换部署模式前停止已有 preview；普通根路径构建不设置这两个变量，重新 build 和 preview。没有 `npm test`、lint 或 format script，不要编造对应命令。
 
+Cache 回归：`node scripts/cache-release.test.mjs` 使用隔离的本地 HTTP/文件夹 fixture；开发服务启动后，运行 `node src/utils/cache.test.mjs http://127.0.0.1:4321/` 检查真实响应。不要在关闭浏览器缓存后声称验证了缓存更新。
+
 ## Code Conventions & Common Patterns
 
 - 沿用两空格缩进、JS/TS 单引号与分号、HTML 属性双引号。Astro 组件使用 PascalCase 文件名，内容 slug 使用小写/kebab-case；不顺手重排或格式化无关代码。
@@ -68,17 +71,20 @@ SITE_URL=https://processmission.github.io SITE_BASE=/company-website npm run pre
 - 内容契约：[src/content.config.ts](src/content.config.ts)、[src/content/page-collections.ts](src/content/page-collections.ts)；共享数据入口：[src/data/content.ts](src/data/content.ts)。
 - 页面公共入口：[BaseLayout.astro](src/layouts/BaseLayout.astro)；菜单定义：[navigation.ts](src/data/navigation.ts)；交互实现：[navigation.ts](src/scripts/navigation.ts)。
 - 路径处理：[paths.ts](src/utils/paths.ts)；构建配置：[astro.config.mjs](astro.config.mjs)；发布流程：[deploy.yml](.github/workflows/deploy.yml)。
+- Cache 契约：[cache.ts](src/config/cache.ts)；开发图片端点：[image-endpoint.ts](src/image-endpoint.ts)；HTML 策略：[middleware.ts](src/middleware.ts)；发布准备：[cache-release.mjs](scripts/cache-release.mjs)。
 
 ## Runtime/Tooling Preferences
 
 - 使用 Node.js `>=22.23.4`，优先采用 [.nvmrc](.nvmrc)；包管理器是 npm，依赖以 `package-lock.json` 为准。不要把 Bun、其他 lockfile 或新的 UI/动画/Markdown framework 当作现有工具链。
 - `SITE_URL` 和 `SITE_BASE` 由构建环境传入，配置读取 `process.env`；默认分别为未设置和 `/`。GitHub Pages workflow 从 Pages metadata 获取 origin/base；仅发布 `dist/`。
+- Cache 按环境和资源分类：开发 HTML 与 `/_image-live/` 图片使用 `no-store`，Vite 模块/版本化依赖保持原生策略；preview 的现有产物使用 `no-cache` 和原生 ETag。Astro 原生预路由错误及 preview 生成的 404 不提供这些额外响应头，不为此接入私有 API 或替换本地服务器。Logo、favicon 从 `src/assets/brand/` 导入；稳定许可证文件保留 `public/` URL。
+- `npm run build` 保持离线。构建后运行 `scripts/cache-release.mjs`，从已发布站点保留仍可能被旧 HTML 引用的资源 24 小时，继承过期时间不续期；首次迁移读取受限静态依赖图。准备后的产物一小时内才可发布，重复准备须重新 build。`dist/cache-assets.json` 是发布元数据，不是 HTTP 头配置；GitHub Pages 的生产缓存头仍由平台控制，脚本校验 HTML 缓存窗口不超过 600 秒。
 - `node_modules/`、`dist/`、`.astro/`、`.npm-cache/`、`.astrotation/`、环境文件及日志是忽略内容，不作为源码提交。
 - Astrotation 仅用于 dev，MCP 在本机 `127.0.0.1:7133/mcp`，配置见 [.omp/mcp.json](.omp/mcp.json)。暴露 dev 只限可信 LAN/VPN；读取批注后按指令处理，不自动 watch。批注状态通过 MCP/网页修改，不直接编辑存储 JSON；源码位置可能指向模板而非 Markdown 行。
 
 ## Testing & QA
 
-- 唯一现有自动化测试是 `node src/utils/paths.test.mjs`，使用 `node:assert/strict`，覆盖前缀、根路径、query/hash、外链、相对路径与幂等性；没有测试框架或 coverage 阈值，也不覆盖页面、导航、视觉或 helper 的默认环境参数。
-- 代码/内容修改按影响运行路径测试、`npm run check` 和 `npm run build`；路径变化还需分别验证根路径与 Pages 子路径。CI 执行路径测试、check、build，但不是 PR 检查 workflow；只在 `main` 执行部署。
+- 自动化检查使用 `node:assert/strict`：`src/utils/paths.test.mjs` 覆盖路径，`src/utils/cache.test.mjs` 检查运行中的开发 HTTP 服务，`scripts/cache-release.test.mjs` 覆盖资源保留、过期与信任边界；没有额外测试框架或 coverage 阈值。
+- 代码/内容修改按影响运行相应测试、`npm run check` 和 `npm run build`；路径变化还需分别验证根路径与 Pages 子路径。CI 执行路径测试、check、build，但不是 PR 检查 workflow；只在 `main` 执行部署。
 - UI/导航变化用实际浏览器检查受影响页面、链接/锚点、当前栏目、desktop/mobile、键盘、连续切页和返回行为。构建通过不能替代浏览器验证；保留无 JS 导航和 reduced-motion 行为。
 - 仅文档修改检查内容、相对链接和命令即可；未运行的检查不得声称通过。新增测试针对可观察行为和真实边界，不为静态文案或简单转发引入测试框架。

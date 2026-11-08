@@ -3,7 +3,7 @@ import { ClientRouter, fade } from 'astro:transitions';
 import { company } from '../data/content';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-import { withBase } from '../utils/paths';
+import faviconUrl from '../assets/brand/favicon.svg?url&no-inline';
 import '../styles/global.css';
 
 interface Props {
@@ -32,7 +32,7 @@ const {
     <meta property="og:site_name" content={company.shortName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="icon" type="image/svg+xml" href={faviconUrl} />
     <title>{title}</title>
     <ClientRouter fallback="animate" />
   </head>

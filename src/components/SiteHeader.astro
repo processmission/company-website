@@ -1,5 +1,6 @@
 ---
 import NavigationItems from './NavigationItems.astro';
+import companyLogo from '../assets/brand/company-logo.webp';
 import { withBase } from '../utils/paths';
 import '../styles/navigation.css';
 
@@ -12,7 +13,7 @@ const currentPath = pathname === base ? '/' : pathname.startsWith(`${base}/`) ? 
   <div class="container header-inner">
     <a class="brand" href={withBase('/')} aria-label="进程使命首页" aria-current={currentPath === '/' ? 'page' : undefined}>
       <img
-        src={withBase('/company-logo.webp')}
+        src={companyLogo.src}
         alt="进程使命 Process Mission"
         width="1100"
         height="211"
