@@ -1,5 +1,9 @@
-MFCP project illustrations: zephyr.png, linux.png, yocto.png, humanize.png
-Source: https://github.com/missionhub-oss/mfcp/tree/8cb9ac7806ab005437e8de69edaa8f38664164d9/images
+MFCP project descriptions used for the website illustrations.
+Source: https://github.com/missionhub-oss/mfcp/blob/8cb9ac7806ab005437e8de69edaa8f38664164d9/README.zh-CN.md
+Website illustrations redrawn from those descriptions:
+zephyr.svg, linux.svg, yocto.svg, humanize.svg
+
+The following notice applies to the upstream reference material.
 
 MIT License
 

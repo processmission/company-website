@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="automotive-title automotive-description" style="--fg:#274b61;--muted:#17232b;--border:#b9ccd7;--surface:#e8f0f4;--accent:#b64926">
+  <title id="automotive-title">Central and zonal vehicle computing</title>
+  <desc id="automotive-description">A flat overhead vehicle outline contains a central computing module and four zonal controllers, joined by a vehicle network. This is a conceptual architecture, not a specific vehicle or deployment.</desc>
+  <defs>
+    <linearGradient id="automotive-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="automotive-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="automotive-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <filter id="automotive-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="automotive-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <text x="768" y="176" fill="var(--muted)" font-size="58" font-weight="500">Zonal control</text>
+    <g fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M768 207V240M270 420V240H1266V420M270 420H310M1266 420H1226"/>
+    </g>
+
+    <g fill="var(--fg)">
+      <rect x="318" y="294" width="158" height="46" rx="14"/>
+      <rect x="1060" y="294" width="158" height="46" rx="14"/>
+      <rect x="318" y="790" width="158" height="46" rx="14"/>
+      <rect x="1060" y="790" width="158" height="46" rx="14"/>
+    </g>
+    <path d="M344 330H1118C1218 330 1304 373 1334 450L1350 500V630L1334 680C1304 757 1218 800 1118 800H344C254 800 194 750 186 682L176 620V510L186 448C194 380 254 330 344 330Z" fill="url(#automotive-surface)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round" filter="url(#automotive-surface-shadow)"/>
+    <path d="M344 334H1118C1216 334 1300 376 1330 451" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="var(--border)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M520 373H996L1090 426V704L996 757H520L448 704V426Z"/>
+      <path d="M520 373L558 438H958L996 373M520 757L558 692H958L996 757"/>
+      <path d="M448 426L504 460V670L448 704M1090 426L1012 460V670L1090 704"/>
+      <path d="M1200 392C1248 428 1268 476 1268 528V602C1268 654 1248 702 1200 738"/>
+      <path d="M244 434V696"/>
+    </g>
+    <g fill="var(--fg)">
+      <path d="M1306 443L1328 472V508H1306Z"/>
+      <path d="M1306 622H1328V658L1306 687Z"/>
+    </g>
+
+    <g fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M364 420H490V710H364M1172 420H1046V710H1172"/>
+      <path d="M490 565H562M974 565H1046"/>
+    </g>
+    <g fill="url(#automotive-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#automotive-panel-shadow)">
+      <rect x="310" y="374" width="108" height="92" rx="10"/>
+      <rect x="1118" y="374" width="108" height="92" rx="10"/>
+      <rect x="310" y="664" width="108" height="92" rx="10"/>
+      <rect x="1118" y="664" width="108" height="92" rx="10"/>
+    </g>
+    <path d="M324 378H404M1132 378H1212M324 668H404M1132 668H1212" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="5" stroke-linecap="round">
+      <path d="M334 400H394M334 420H374M334 440H394M1142 400H1202M1142 420H1182M1142 440H1202"/>
+      <path d="M334 690H394M334 710H374M334 730H394M1142 690H1202M1142 710H1182M1142 730H1202"/>
+    </g>
+    <rect x="562" y="456" width="412" height="218" rx="16" fill="url(#automotive-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#automotive-panel-shadow)"/>
+    <path d="M582 460H954" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="768" y="546" fill="#17232b" font-size="58" font-weight="500">Central</text>
+    <text x="768" y="617" fill="#17232b" font-size="58" font-weight="500">compute</text>
+    <g fill="var(--accent)">
+      <circle cx="490" cy="565" r="8"/>
+      <circle cx="1046" cy="565" r="8"/>
+    </g>
+    <path d="M1046 710V858H986" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="768" y="908" fill="var(--fg)" font-size="50" font-weight="400">Vehicle network</text>
+  </g>
+</svg>

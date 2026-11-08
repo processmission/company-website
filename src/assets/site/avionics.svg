@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="avionics-title avionics-description" style="--fg:#274b61;--muted:#17232b;--border:#b9ccd7;--surface:#e8f0f4;--accent:#b64926">
+  <title id="avionics-title">Aircraft with isolated avionics and flight-control domains</title>
+  <desc id="avionics-description">A conceptual top-view aircraft connects to separate Linux avionics services and Zephyr flight-control domains. An orange boundary represents partition isolation, not a certified or deployed aircraft system.</desc>
+  <defs>
+    <linearGradient id="avionics-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="avionics-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="avionics-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <filter id="avionics-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="avionics-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <g stroke="var(--fg)" stroke-width="4" stroke-linejoin="round" filter="url(#avionics-surface-shadow)">
+      <path d="M734 252 302 376 254 433 718 367 732 448 588 511 588 538 768 498 948 538 948 511 804 448 818 367 1282 433 1234 376 802 252Z" fill="url(#avionics-blue)"/>
+      <path d="M768 132C739 157 725 206 725 272L736 461Q742 498 768 516Q794 498 800 461L811 272C811 206 797 157 768 132Z" fill="url(#avionics-surface)"/>
+      <rect x="562" y="327" width="46" height="105" rx="20" fill="var(--fg)"/>
+      <rect x="928" y="327" width="46" height="105" rx="20" fill="var(--fg)"/>
+    </g>
+    <g fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round">
+      <path d="M730 260 307 381 270 424M806 260 1229 381 1266 424"/>
+      <path d="M765 142C741 167 729 211 729 272L740 456"/>
+    </g>
+    <path d="M747 213Q768 192 789 213L793 239Q768 223 743 239Z" fill="var(--fg)"/>
+    <path d="M768 421V491M340 408 615 363M921 363 1196 408" fill="none" stroke="var(--border)" stroke-width="5" stroke-linecap="round"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linejoin="round">
+      <path d="M530 456V592H432V658M1006 456V592H1104V658"/>
+    </g>
+    <g fill="var(--accent)">
+      <circle cx="530" cy="456" r="9"/>
+      <circle cx="1006" cy="456" r="9"/>
+    </g>
+    <rect x="162" y="658" width="540" height="210" rx="18" fill="url(#avionics-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#avionics-panel-shadow)"/>
+    <rect x="834" y="658" width="540" height="210" rx="18" fill="url(#avionics-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#avionics-panel-shadow)"/>
+    <path d="M184 662H680M856 662H1352" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <path d="M768 650V872" fill="none" stroke="var(--accent)" stroke-width="5"/>
+    <g fill="var(--muted)" font-size="62" font-weight="500">
+      <text x="432" y="737">Linux</text>
+      <text x="1104" y="737">Zephyr</text>
+    </g>
+    <g fill="var(--fg)" font-size="49" font-weight="400">
+      <text x="432" y="812">Avionics services</text>
+      <text x="1104" y="812">Flight control</text>
+      <text x="768" y="930">Partition isolation</text>
+    </g>
+  </g>
+</svg>

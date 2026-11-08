@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="mfcp-yocto-title mfcp-yocto-description">
+  <title id="mfcp-yocto-title">Recipes and layers build a target Linux image</title>
+  <desc id="mfcp-yocto-description">A conceptual Yocto build flow: recipes and software layers feed a build that produces an embedded Linux image for a target platform. The diagram represents reproducible image construction as an engineering goal, not a screenshot, an available download or a claim that a particular build has been verified.</desc>
+  <defs>
+    <linearGradient id="mfcp-yocto-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="mfcp-yocto-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="mfcp-yocto-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="mfcp-yocto-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mfcp-yocto-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="mfcp-yocto-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <g fill="none" stroke="#a9bec9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M434 330H510V512H594M434 700H510V512"/>
+      <path d="M576 498L594 512 576 526M942 512H1066M1048 498L1066 512 1048 526"/>
+    </g>
+    <circle cx="510" cy="512" r="7" fill="#274b61"/>
+
+    <path d="M166 182H362L412 232V426H166Z" fill="url(#mfcp-yocto-surface)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round" filter="url(#mfcp-yocto-panel-shadow)"/>
+    <path d="M138 214H352L404 266V464H138Z" fill="url(#mfcp-yocto-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" stroke-linejoin="round" filter="url(#mfcp-yocto-panel-shadow)"/>
+    <path d="M142 218H348M352 214V266H404" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M352 218V266H400" fill="none" stroke="#b64926" stroke-opacity=".3" stroke-width="3" stroke-linejoin="round"/>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round">
+      <path d="M186 302H310M186 338H350M186 374H282"/>
+    </g>
+    <text x="274" y="536" text-anchor="middle" font-size="56" font-weight="500" fill="#17232b">Recipes</text>
+
+    <g stroke="#a9bec9" stroke-width="3" filter="url(#mfcp-yocto-panel-shadow)">
+      <rect x="132" y="740" width="292" height="68" rx="13" fill="url(#mfcp-yocto-surface)"/>
+      <rect x="144" y="676" width="280" height="68" rx="13" fill="url(#mfcp-yocto-blue)"/>
+      <rect x="156" y="612" width="268" height="68" rx="13" fill="url(#mfcp-yocto-blue)"/>
+    </g>
+    <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+      <path d="M151 744H404M163 680H404M175 616H404"/>
+    </g>
+    <g fill="#274b61" fill-opacity=".7">
+      <rect x="186" y="640" width="34" height="12" rx="4"/>
+      <rect x="174" y="704" width="34" height="12" rx="4"/>
+      <rect x="162" y="768" width="34" height="12" rx="4"/>
+    </g>
+    <text x="278" y="880" text-anchor="middle" font-size="56" font-weight="500" fill="#17232b">Layers</text>
+
+    <path d="M642 302H894L938 346V650L894 694H642L598 650V346Z" fill="url(#mfcp-yocto-blue)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round" filter="url(#mfcp-yocto-surface-shadow)"/>
+    <path d="M642 302H894L938 346V650L894 694H642L598 650V346Z" fill="url(#mfcp-yocto-light)"/>
+    <path d="M644 306H892L934 348" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M714 394L682 426 714 458M822 394L854 426 822 458M784 382L752 470"/>
+      <path d="M690 514H846M714 540H822" stroke="#a9bec9" stroke-width="4"/>
+    </g>
+    <text x="768" y="624" text-anchor="middle" font-size="60" font-weight="500" fill="#17232b">Build</text>
+
+    <path d="M1070 270H1306L1398 362V692Q1398 712 1378 712H1090Q1070 712 1070 692Z" fill="url(#mfcp-yocto-surface)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round" filter="url(#mfcp-yocto-surface-shadow)"/>
+    <path d="M1070 270H1306L1398 362V692Q1398 712 1378 712H1090Q1070 712 1070 692Z" fill="url(#mfcp-yocto-light)"/>
+    <path d="M1074 274H1302M1306 274V362H1394" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M1306 274V362H1394" fill="none" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="1146" y="422" width="176" height="176" rx="20" fill="url(#mfcp-yocto-blue)" stroke="#a9bec9" stroke-width="3"/>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round">
+      <path d="M1182 450V570H1286M1202 490H1266M1202 522H1246"/>
+      <path d="M1174 422V404M1214 422V404M1254 422V404M1294 422V404M1174 598V616M1214 598V616M1254 598V616M1294 598V616" stroke="#a9bec9" stroke-width="4"/>
+    </g>
+    <path d="M1122 656H1346" fill="none" stroke="#cad4d9" stroke-width="3" stroke-linecap="round"/>
+    <text x="1234" y="794" text-anchor="middle" font-size="56" font-weight="500" fill="#17232b">Linux image</text>
+    <text x="1234" y="856" text-anchor="middle" font-size="44" font-weight="400" fill="#53616a">Target platform</text>
+  </g>
+</svg>

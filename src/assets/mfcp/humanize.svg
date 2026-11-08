@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="mfcp-humanize-title mfcp-humanize-description">
+  <title id="mfcp-humanize-title">Human and coding Agent collaboration</title>
+  <desc id="mfcp-humanize-description">A conceptual collaboration workflow connects a person and a coding Agent through shared changes. Command-line and desktop tools support the collaboration; review and validation feed back into the human-led work. These symbols describe areas of contribution, not actual product interfaces, implemented features or completed validation results.</desc>
+  <defs>
+    <linearGradient id="mfcp-humanize-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="mfcp-humanize-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="mfcp-humanize-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="mfcp-humanize-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mfcp-humanize-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="mfcp-humanize-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <g fill="none" stroke="#a9bec9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M438 372H620M456 358L438 372 456 386M602 358L620 372 602 386"/>
+      <path d="M916 372H1098M934 358L916 372 934 386M1080 358L1098 372 1080 386"/>
+      <path d="M768 556V606M392 666V606H1144V666M1130 648L1144 666 1158 648"/>
+      <path d="M1144 856V916H300V508M286 526L300 508 314 526"/>
+    </g>
+    <circle cx="768" cy="606" r="7" fill="#274b61"/>
+
+    <text x="300" y="194" text-anchor="middle" font-size="60" font-weight="500" fill="#17232b">Human</text>
+    <circle cx="300" cy="370" r="128" fill="url(#mfcp-humanize-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#mfcp-humanize-surface-shadow)"/>
+    <circle cx="300" cy="370" r="126" fill="url(#mfcp-humanize-light)"/>
+    <path d="M206 292A124 124 0 0 1 394 292" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="300" cy="334" r="38" fill="url(#mfcp-humanize-warm)" stroke="#274b61" stroke-width="5"/>
+    <path d="M226 432C232 394 256 380 300 380S368 394 374 432" fill="url(#mfcp-humanize-warm)" stroke="#274b61" stroke-width="5" stroke-linecap="round"/>
+
+    <text x="1236" y="194" text-anchor="middle" font-size="56" font-weight="500" fill="#17232b">Coding Agent</text>
+    <path d="M1150 246H1322L1364 288V454L1322 496H1150L1108 454V288Z" fill="url(#mfcp-humanize-blue)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round" filter="url(#mfcp-humanize-surface-shadow)"/>
+    <path d="M1150 246H1322L1364 288V454L1322 496H1150L1108 454V288Z" fill="url(#mfcp-humanize-light)"/>
+    <path d="M1152 250H1320L1360 290" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="#274b61" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1190 326L1158 370 1190 414M1282 326L1314 370 1282 414M1252 314L1220 426"/>
+    </g>
+
+    <path d="M646 252H836L910 326V536Q910 556 890 556H646Q626 556 626 536V272Q626 252 646 252Z" fill="url(#mfcp-humanize-surface)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round" filter="url(#mfcp-humanize-panel-shadow)"/>
+    <path d="M648 256H832M836 256V326H906" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M836 256V326H906" fill="none" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round"/>
+    <g fill="none" stroke-width="5" stroke-linecap="round">
+      <path d="M680 340H704M692 328V352M730 340H810" stroke="#b64926"/>
+      <path d="M680 380H704M730 380H842" stroke="#274b61"/>
+    </g>
+    <g text-anchor="middle" font-size="44" font-weight="400" fill="#53616a">
+      <text x="768" y="464">Shared</text>
+      <text x="768" y="518">changes</text>
+    </g>
+
+    <rect x="132" y="666" width="520" height="190" rx="22" fill="url(#mfcp-humanize-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#mfcp-humanize-panel-shadow)"/>
+    <rect x="884" y="666" width="520" height="190" rx="22" fill="url(#mfcp-humanize-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#mfcp-humanize-panel-shadow)"/>
+    <path d="M156 670H628M908 670H1380" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M378 700V822M1130 700V822" fill="none" stroke="#cad4d9" stroke-width="3"/>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M218 716L240 736 218 756M258 756H286"/>
+      <rect x="464" y="708" width="80" height="56" rx="7"/>
+      <path d="M504 764V778M482 778H526"/>
+      <path d="M962 708H1008L1030 730V774H962Z"/>
+      <path d="M1008 708V730H1030M978 746H1014M978 760H1002" stroke-width="4"/>
+      <circle cx="1246" cy="738" r="30"/>
+      <path d="M1246 708V700M1276 738H1284M1246 768V776M1216 738H1208M1246 738L1260 722" stroke-width="4"/>
+    </g>
+    <circle cx="1246" cy="738" r="5" fill="#b64926"/>
+    <g text-anchor="middle" font-size="44" font-weight="400" fill="#17232b">
+      <text x="254" y="828">CLI</text>
+      <text x="504" y="828">Desktop</text>
+      <text x="1006" y="828">Review</text>
+      <text x="1260" y="828">Validation</text>
+    </g>
+  </g>
+</svg>

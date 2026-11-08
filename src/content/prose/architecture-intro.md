@@ -1,1 +1,1 @@
-不在应用生态与实时性之间二选一。让 Linux 发挥复杂软件生态优势，让 Zephyr 承担确定性控制，由 Hypervisor 管理分区资源与隔离边界。
+Linux 承载复杂应用，Zephyr 承担实时控制，Hypervisor 管理分区资源与隔离边界。

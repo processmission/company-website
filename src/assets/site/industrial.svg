@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="industrial-title industrial-description" style="--fg:#274b61;--muted:#17232b;--border:#b9ccd7;--surface:#e8f0f4;--accent:#b64926">
+  <title id="industrial-title">Industrial edge control and distributed I/O</title>
+  <desc id="industrial-description">A flat front-view edge controller connects through a fieldbus to distributed input/output modules and a generic industrial machine with a spindle and conveyor. The scene illustrates computing, communication and field control, not a specific product or installation.</desc>
+  <defs>
+    <linearGradient id="industrial-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="industrial-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="industrial-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <filter id="industrial-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="industrial-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <text x="426" y="178" fill="var(--muted)" font-size="58" font-weight="500">Edge controller</text>
+    <rect x="180" y="230" width="492" height="276" rx="16" fill="url(#industrial-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#industrial-surface-shadow)"/>
+    <path d="M200 234H652" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M180 300H672" fill="none" stroke="var(--border)" stroke-width="4"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M214 267H422M462 267H486M510 267H534"/>
+      <path d="M218 338V412M240 338V412M262 338V412M284 338V412"/>
+      <path d="M218 450H298M218 470H298"/>
+      <rect x="342" y="338" width="282" height="110" rx="8"/>
+      <path d="M372 366H418V410H372ZM450 366H496V410H450ZM528 366H594V410H528Z"/>
+      <path d="M358 474H382M408 474H432M458 474H482M508 474H532M558 474H582"/>
+    </g>
+    <circle cx="624" cy="266" r="9" fill="var(--accent)"/>
+    <path d="M212 506V528H640V506" fill="none" stroke="var(--fg)" stroke-width="6" stroke-linejoin="round"/>
+
+    <g fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M672 388H790V572H1128V628"/>
+      <path d="M790 572H432V654"/>
+    </g>
+    <circle cx="790" cy="572" r="9" fill="var(--accent)"/>
+    <text x="1100" y="354" fill="var(--fg)" font-size="52" font-weight="400">Fieldbus</text>
+    <path d="M1100 382V496" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1040 432H1072V410H1104V454H1136V432H1168"/>
+    </g>
+
+    <path d="M180 694H684M180 816H684" fill="none" stroke="var(--border)" stroke-width="8" stroke-linecap="round"/>
+    <g fill="url(#industrial-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#industrial-panel-shadow)">
+      <rect x="224" y="654" width="124" height="190" rx="10"/>
+      <rect x="370" y="654" width="124" height="190" rx="10"/>
+      <rect x="516" y="654" width="124" height="190" rx="10"/>
+    </g>
+    <path d="M238 658H334M384 658H480M530 658H626" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="var(--fg)">
+      <rect x="248" y="680" width="76" height="48" rx="5"/>
+      <rect x="394" y="680" width="76" height="48" rx="5"/>
+      <rect x="540" y="680" width="76" height="48" rx="5"/>
+    </g>
+    <g fill="var(--accent)">
+      <circle cx="262" cy="750" r="6"/>
+      <circle cx="408" cy="750" r="6"/>
+      <circle cx="554" cy="750" r="6"/>
+    </g>
+    <g fill="none" stroke="var(--fg)" stroke-width="5" stroke-linecap="round">
+      <path d="M248 786H324M248 808H324M394 786H470M394 808H470M540 786H616M540 808H616"/>
+      <path d="M260 774V820M286 774V820M312 774V820M406 774V820M432 774V820M458 774V820M552 774V820M578 774V820M604 774V820"/>
+    </g>
+    <text x="432" y="924" fill="var(--muted)" font-size="54" font-weight="500">Distributed I/O</text>
+
+    <path d="M904 788V628H1280V788" fill="none" stroke="var(--fg)" stroke-width="18" stroke-linejoin="round"/>
+    <rect x="1066" y="606" width="124" height="96" rx="10" fill="url(#industrial-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#industrial-panel-shadow)"/>
+    <path d="M1080 610H1176" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1128 702V754" fill="none" stroke="var(--fg)" stroke-width="14"/>
+    <path d="M1106 754H1150L1138 774H1118Z" fill="var(--fg)"/>
+    <path d="M980 696H1038M980 718H1038" fill="none" stroke="var(--border)" stroke-width="6" stroke-linecap="round"/>
+    <rect x="1054" y="792" width="148" height="32" rx="5" fill="url(#industrial-surface)" stroke="#a9bec9" stroke-width="3"/>
+    <rect x="838" y="824" width="508" height="34" rx="17" fill="url(#industrial-blue)" stroke="#a9bec9" stroke-width="3"/>
+    <g fill="var(--surface)" stroke="var(--fg)" stroke-width="4">
+      <circle cx="872" cy="841" r="10"/>
+      <circle cx="946" cy="841" r="10"/>
+      <circle cx="1020" cy="841" r="10"/>
+      <circle cx="1094" cy="841" r="10"/>
+      <circle cx="1168" cy="841" r="10"/>
+      <circle cx="1242" cy="841" r="10"/>
+      <circle cx="1316" cy="841" r="10"/>
+    </g>
+    <path d="M884 858V876M1300 858V876" fill="none" stroke="var(--fg)" stroke-width="8" stroke-linecap="round"/>
+    <text x="1092" y="924" fill="var(--muted)" font-size="54" font-weight="500">Field device</text>
+  </g>
+</svg>

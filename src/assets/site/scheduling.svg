@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="scheduling-title scheduling-description" style="--fg:#274b61;--muted:#17232b;--border:#cad4d9;--surface:#e8f0f4;--accent:#b64926">
+  <title id="scheduling-title">Cross-layer execution and scheduling analysis</title>
+  <desc id="scheduling-description">Conceptual aligned timelines distinguish partition availability, Guest execution, task execution, waiting and an interrupt. Runtime observation informs candidate configuration, followed by target timing verification and iteration. The diagram has no numerical scale and makes no latency claim.</desc>
+  <defs>
+    <linearGradient id="scheduling-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="scheduling-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="scheduling-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <rect x="132" y="140" width="1272" height="510" rx="20" fill="url(#scheduling-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#scheduling-surface-shadow)"/>
+    <rect x="134" y="142" width="1268" height="506" rx="18" fill="url(#scheduling-light)"/>
+    <path d="M156 144H1380" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="var(--muted)" font-size="56" font-weight="500">
+      <text x="164" y="228">Partition</text>
+      <text x="164" y="380">Guest</text>
+      <text x="164" y="532">Task</text>
+    </g>
+    <g fill="none" stroke="var(--border)" stroke-width="4">
+      <path d="M480 240H1360M480 392H1360M480 544H1360"/>
+      <path d="M700 162V566M990 162V566" stroke-dasharray="10 12"/>
+    </g>
+    <g fill="var(--fg)" fill-opacity=".8">
+      <rect x="480" y="180" width="220" height="52" rx="6"/>
+      <rect x="990" y="180" width="370" height="52" rx="6"/>
+      <rect x="520" y="332" width="124" height="52" rx="6"/>
+      <rect x="1030" y="332" width="270" height="52" rx="6"/>
+      <rect x="565" y="484" width="60" height="52" rx="6"/>
+      <rect x="1080" y="484" width="60" height="52" rx="6"/>
+      <rect x="1170" y="484" width="75" height="52" rx="6"/>
+    </g>
+    <path d="M488 184H692M998 184H1352M528 336H636M1038 336H1292M573 488H617M1088 488H1132M1178 488H1237" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+    <rect x="700" y="332" width="290" height="52" rx="6" fill="none" stroke="var(--accent)" stroke-width="4" stroke-dasharray="10 10"/>
+    <g fill="var(--accent)" font-size="44" font-weight="400">
+      <text x="845" y="373" text-anchor="middle">Waiting</text>
+      <text x="1168" y="451">Interrupt</text>
+    </g>
+    <g fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1155 462V551M1145 478L1155 466L1165 478"/>
+    </g>
+    <g fill="none" stroke="var(--fg)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M480 596H1360M1342 582L1360 596L1342 610"/>
+    </g>
+    <text x="1320" y="637" fill="var(--fg)" font-size="44" font-weight="400" text-anchor="middle">Time</text>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M305 696V744H385M316 726H332L344 704L357 735L369 718H385"/>
+      <path d="M730 704H806M730 721H806M730 738H806" stroke="var(--border)"/>
+      <path d="M748 696V712M787 713V729M762 730V746"/>
+      <rect x="1151" y="697" width="80" height="48" rx="6"/>
+      <path d="M1163 721H1175L1184 707L1197 733L1208 717H1219M1168 697V687M1191 697V687M1214 697V687M1168 745V755M1191 745V755M1214 745V755"/>
+      <path d="M500 784H593M577 772L593 784L577 796M951 784H1044M1028 772L1044 784L1028 796"/>
+    </g>
+    <g fill="var(--muted)" font-size="56" font-weight="500" text-anchor="middle">
+      <text x="345" y="804">Observe</text>
+      <text x="768" y="804">Configure</text>
+      <text x="1191" y="804">Verify</text>
+    </g>
+    <g fill="var(--fg)" font-size="44" font-weight="400" text-anchor="middle">
+      <text x="345" y="861">Runtime events</text>
+      <text x="768" y="861">Candidate settings</text>
+      <text x="1191" y="861">Target timing</text>
+    </g>
+    <path d="M1191 886V918H345V886M333 902L345 886L357 902" fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="assurance-title assurance-description" style="--fg:#274b61;--muted:#17232b;--border:#cad4d9;--surface:#e8f0f4;--accent:#b64926">
+  <title id="assurance-title">Linked evidence and change-impact review</title>
+  <desc id="assurance-description">Requirements, design, configuration and verification records connect through an evidence linkage map. A highlighted change-impact branch identifies the scope for review and possible supplementary evidence. This conceptual evidence workflow is not a certificate or a claim of certification.</desc>
+  <defs>
+    <linearGradient id="assurance-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="assurance-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="assurance-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="assurance-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="assurance-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="assurance-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M768 300V410M768 610V744M508 510H590M946 510H1030"/>
+    </g>
+    <g fill="var(--surface)" stroke="var(--fg)" stroke-width="4">
+      <circle cx="768" cy="355" r="10"/>
+      <circle cx="768" cy="677" r="10"/>
+      <circle cx="549" cy="510" r="10"/>
+      <circle cx="988" cy="510" r="10"/>
+    </g>
+    <g stroke="var(--border)" stroke-width="3" stroke-linejoin="round" filter="url(#assurance-panel-shadow)">
+      <path d="M500 120H996L1036 160V300H500Z" fill="url(#assurance-blue)"/>
+      <path d="M132 400H468L508 440V620H132Z" fill="url(#assurance-warm)"/>
+      <path d="M1030 400H1364L1404 440V620H1030Z" fill="url(#assurance-blue)"/>
+      <path d="M500 744H996L1036 784V924H500Z" fill="url(#assurance-surface)"/>
+    </g>
+    <path d="M504 124H994M136 404H466M1034 404H1362M504 748H994" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="var(--border)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M996 120V160H1036M468 400V440H508M1364 400V440H1404M996 744V784H1036"/>
+      <path d="M590 246H946M590 270H864"/>
+      <path d="M194 542H446M194 570H386"/>
+      <path d="M1092 542H1342M1092 570H1282"/>
+      <path d="M590 870H946M590 894H864"/>
+    </g>
+    <g fill="var(--muted)" font-size="56" font-weight="500">
+      <text x="768" y="207">Requirements</text>
+      <text x="320" y="498">Verification</text>
+      <text x="1217" y="498">Design</text>
+      <text x="768" y="831">Configuration</text>
+    </g>
+    <rect x="590" y="410" width="356" height="200" rx="16" fill="url(#assurance-blue)" stroke="#b4c6d0" stroke-width="3" filter="url(#assurance-surface-shadow)"/>
+    <rect x="592" y="412" width="352" height="196" rx="14" fill="url(#assurance-light)"/>
+    <path d="M610 414H926" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="var(--muted)" font-size="60" font-weight="500">
+      <text x="768" y="493">Evidence</text>
+      <text x="768" y="562">links</text>
+    </g>
+    <path d="M946 590H980V660H1185V684" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1185" cy="696" r="12" fill="none" stroke="var(--accent)" stroke-width="5"/>
+    <g fill="var(--accent)" font-size="56" font-weight="500">
+      <text x="1185" y="770">Change</text>
+      <text x="1185" y="833">impact</text>
+    </g>
+    <text x="1185" y="894" fill="var(--fg)" font-size="44" font-weight="400">Review scope</text>
+  </g>
+</svg>

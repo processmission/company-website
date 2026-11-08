@@ -8,7 +8,7 @@ const section = z.object({ id: z.string(), title: z.string(), items: z.array(pla
 export const pageCollections = {
   pages: defineCollection({
     loader: glob({ pattern: '*.md', base: './src/content/pages' }),
-    schema: z.object({
+    schema: ({ image }) => z.object({
       title: z.string().optional(),
       description: z.string().optional(),
       heading: z.string().optional(),
@@ -21,6 +21,8 @@ export const pageCollections = {
       actions: z.array(z.object({ href: z.string(), label: z.string() })).default([]),
       tags: z.array(z.string()).default([]),
       visualLabel: z.string().optional(),
+      image: image().optional(),
+      imageAlt: z.string().optional(),
     }),
   }),
   prose: defineCollection({

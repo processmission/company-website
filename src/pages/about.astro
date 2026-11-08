@@ -2,7 +2,6 @@
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeading from '../components/PageHeading.astro';
-import ContentPlaceholder from '../components/ContentPlaceholder.astro';
 import { company, contactItems, officialChannels } from '../data/content';
 
 const entry = (await getEntry('pages', 'about'))!;
@@ -11,35 +10,42 @@ const { Content: CompanyStory } = await render(entry);
 ---
 
 <BaseLayout title={`关于我们｜${company.shortName}`} description={company.description}>
-  <PageHeading eyebrow={page.eyebrow} title={page.heading!} description={company.positioning} />
+  <PageHeading eyebrow={page.eyebrow} title={page.heading!} description={company.description} image={page.image} imageAlt={page.imageAlt} />
   <section class="section about-section" aria-labelledby="about-title">
     <div class="container about-grid">
-      <div>
-        <h2 id="about-title">{company.mission}</h2>
-      </div>
+      <h2 id="about-title">{company.mission}</h2>
       <div class="about-copy">
         <p class="company-name">{company.name}</p>
-        <p>{company.description}</p>
         <CompanyStory />
       </div>
     </div>
   </section>
-  {page.sections.map((section) => (
-    <section id={section.id} class="section company-information" aria-labelledby={`${section.id}-title`}>
-      <div class="container">
-        <div class="section-heading">
-          <h2 id={`${section.id}-title`}>{section.title}</h2>
-        </div>
-        {section.id === 'contact' ? (
-          <div class="product-grid">{contactItems.map((item) => <ContentPlaceholder {...item} />)}</div>
-        ) : section.id === 'channels' ? (
-          <div class="product-grid">{officialChannels.map((channel) => <ContentPlaceholder {...channel} />)}</div>
-        ) : section.items.map((item) => <ContentPlaceholder {...item} />)}
-      </div>
-    </section>
-  ))}
+  <div class="container company-directory">
+    {page.sections.map((section) => (
+      <section id={section.id} class="company-information" aria-labelledby={`${section.id}-title`}>
+        <h2 id={`${section.id}-title`}>{section.title}</h2>
+        <dl>
+          {(section.id === 'contact' ? contactItems : section.id === 'channels' ? officialChannels : section.items).map((item) => (
+            <div id={item.id}>
+              <dt>{item.title}</dt>
+              <dd>需要补充更多内容：{item.needed}。</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    ))}
+  </div>
 </BaseLayout>
 
 <style>
-  .company-information { padding-block: clamp(2rem, 5vw, 4rem); scroll-margin-top: 1rem; }
+  .company-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 4rem; padding-bottom: clamp(3.5rem, 7vw, 6.25rem); }
+  .company-information { min-width: 0; padding-top: 1.25rem; border-top: 1px solid var(--color-border); scroll-margin-top: 1rem; }
+  .company-information h2 { font-size: 1.35rem; }
+  .company-information dl { display: grid; gap: 1rem; margin-top: 1rem; }
+  .company-information dl > div { scroll-margin-top: 1rem; }
+  .company-information dt { font-weight: 600; }
+  .company-information dd { margin: .35rem 0 0; color: var(--color-muted); font-size: 1rem; }
+  @media (max-width: 760px) {
+    .company-directory { grid-template-columns: 1fr; }
+  }
 </style>

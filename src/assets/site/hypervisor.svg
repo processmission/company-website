@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="hypervisor-title hypervisor-description">
+  <title id="hypervisor-title">Guest isolation and shared resource allocation</title>
+  <desc id="hypervisor-description">Linux, Zephyr and a conceptual legacy Guest occupy separate partitions and retain their own task schedulers. A Hypervisor schedules partitions and allocates resources from a shared CPU, memory and I/O pool. Isolation and recovery require validation on the target hardware and partition configuration. Legacy image reuse additionally requires instruction-set compatibility and matching virtual hardware; it is not an unconditional migration capability.</desc>
+  <defs>
+    <linearGradient id="hv-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="hv-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="hv-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="hv-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hv-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="hv-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <g fill="none" stroke="#a9bec9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M326 492V558M768 492V558M1210 492V558"/>
+      <path d="M768 728V814M326 814V774H1210V814"/>
+    </g>
+    <g stroke-width="3" filter="url(#hv-panel-shadow)">
+      <rect x="132" y="140" width="388" height="352" rx="22" fill="url(#hv-warm)" stroke="#b64926" stroke-opacity=".3"/>
+      <rect x="574" y="140" width="388" height="352" rx="22" fill="url(#hv-blue)" stroke="#a9bec9"/>
+      <rect x="1016" y="140" width="388" height="352" rx="22" fill="url(#hv-surface)" stroke="#cad4d9"/>
+    </g>
+    <g fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round">
+      <path d="M156 144H496M598 144H938M1040 144H1380"/>
+    </g>
+    <path d="M547 158V474M989 158V474" fill="none" stroke="#b64926" stroke-opacity=".55" stroke-width="3" stroke-dasharray="10 12"/>
+    <g fill="#17232b" font-size="60" font-weight="500">
+      <text x="326" y="224">Linux</text>
+      <text x="768" y="224">Zephyr</text>
+      <text x="1210" y="224">Legacy</text>
+    </g>
+    <g fill="#53616a" font-size="44" font-weight="400">
+      <text x="326" y="284">Guest</text>
+      <text x="768" y="284">Guest</text>
+      <text x="1210" y="284">Guest</text>
+      <text x="326" y="452">Task scheduler</text>
+      <text x="768" y="452">Task scheduler</text>
+      <text x="1210" y="452">Task scheduler</text>
+    </g>
+    <g fill="none" stroke="#a9bec9" stroke-width="3" stroke-linecap="round">
+      <path d="M188 376H464M630 376H906M1072 376H1348"/>
+      <path d="M188 330V384M630 330V384M1072 330V384"/>
+    </g>
+    <g fill="#b64926" fill-opacity=".65">
+      <rect x="202" y="336" width="70" height="30" rx="5"/>
+      <rect x="292" y="336" width="50" height="30" rx="5"/>
+      <rect x="362" y="336" width="88" height="30" rx="5"/>
+    </g>
+    <g fill="#274b61" fill-opacity=".8">
+      <rect x="644" y="336" width="48" height="30" rx="5"/>
+      <rect x="714" y="336" width="48" height="30" rx="5"/>
+      <rect x="784" y="336" width="48" height="30" rx="5"/>
+      <rect x="854" y="336" width="38" height="30" rx="5"/>
+      <rect x="1086" y="336" width="110" height="30" rx="5"/>
+      <rect x="1218" y="336" width="116" height="30" rx="5"/>
+    </g>
+
+    <rect x="132" y="558" width="1272" height="170" rx="20" fill="url(#hv-blue)" stroke="#b4c6d0" stroke-width="3" filter="url(#hv-surface-shadow)"/>
+    <rect x="134" y="560" width="1268" height="166" rx="18" fill="url(#hv-light)"/>
+    <path d="M156 562H1380" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="768" y="627" font-size="62" font-weight="500" fill="#17232b">Hypervisor</text>
+    <text x="768" y="694" font-size="46" font-weight="400" fill="#53616a">Partition scheduling / Resource allocation</text>
+    <g fill="#b64926">
+      <rect x="312" y="524" width="28" height="8" rx="3"/>
+      <rect x="754" y="524" width="28" height="8" rx="3"/>
+      <rect x="1196" y="524" width="28" height="8" rx="3"/>
+    </g>
+    <circle cx="768" cy="774" r="7" fill="#274b61"/>
+
+    <rect x="132" y="814" width="1272" height="114" rx="18" fill="url(#hv-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#hv-panel-shadow)"/>
+    <path d="M154 818H1382" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M550 838V904M990 838V904" stroke="#cad4d9" stroke-width="3"/>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="190" y="846" width="48" height="48" rx="6"/>
+      <path d="M202 846V836M226 846V836M202 894V904M226 894V904M190 858H180M190 882H180M238 858H248M238 882H248"/>
+      <rect x="613" y="850" width="66" height="40" rx="5"/>
+      <path d="M626 862V878M646 862V878M666 862V878M626 890V902M646 890V902M666 890V902"/>
+      <path d="M1074 852H1112V888H1074ZM1112 862H1134M1112 878H1134M1086 852V840M1100 888V900"/>
+    </g>
+    <g fill="#17232b" font-size="56" font-weight="500">
+      <text x="365" y="889">CPU</text>
+      <text x="812" y="889">Memory</text>
+      <text x="1250" y="889">I/O</text>
+    </g>
+  </g>
+</svg>

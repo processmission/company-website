@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="robotics-title robotics-description" style="--fg:#274b61;--muted:#17232b;--border:#b9ccd7;--surface:#e8f0f4;--accent:#b64926">
+  <title id="robotics-title">Robot sensing, inference and deterministic motion control</title>
+  <desc id="robotics-description">A sensor feeds a Linux AI and ROS 2 domain. A separate Zephyr motion-control domain drives an articulated robot actuator and receives feedback. The orange boundary distinguishes the compute domains; AI does not replace the motion-control loop.</desc>
+  <defs>
+    <linearGradient id="robotics-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="robotics-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="robotics-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <filter id="robotics-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="robotics-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <g fill="url(#robotics-surface)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round" filter="url(#robotics-panel-shadow)">
+      <rect x="168" y="147" width="176" height="102" rx="14"/>
+      <circle cx="256" cy="198" r="30"/>
+    </g>
+    <circle cx="256" cy="198" r="12" fill="var(--fg)"/>
+    <path d="M344 180 372 166V230L344 216" fill="url(#robotics-blue)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M186 151H326" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <text x="516" y="216" fill="var(--fg)" font-size="51" font-weight="400">Sensors</text>
+    <path d="M256 249V275H415V300" fill="none" stroke="var(--fg)" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="150" y="300" width="530" height="180" rx="18" fill="url(#robotics-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#robotics-panel-shadow)"/>
+    <rect x="150" y="580" width="530" height="180" rx="18" fill="url(#robotics-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#robotics-panel-shadow)"/>
+    <path d="M172 304H658M172 584H658" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <g fill="var(--muted)" font-size="62" font-weight="500">
+      <text x="415" y="371">Linux</text>
+      <text x="415" y="651">Zephyr</text>
+    </g>
+    <g fill="var(--fg)" font-size="49" font-weight="400">
+      <text x="415" y="442">AI + ROS 2</text>
+      <text x="415" y="722">Motion control</text>
+    </g>
+    <path d="M150 530H680" fill="none" stroke="var(--accent)" stroke-width="5"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M415 480V568M401 551 415 568 429 551"/>
+      <path d="M680 670H1030M1013 656 1030 670 1013 684"/>
+    </g>
+    <text x="1110" y="174" fill="var(--fg)" font-size="51" font-weight="400">Actuator</text>
+    <g fill="url(#robotics-surface)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round" filter="url(#robotics-panel-shadow)">
+      <rect x="1058" y="668" width="64" height="69" rx="8"/>
+      <path d="M1021 737H1159L1184 802H996Z"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#robotics-surface-shadow)">
+      <path d="M1090 662 958 432 1178 272 1252 316" stroke="#a9bec9" stroke-width="74"/>
+      <path d="M1090 662 958 432 1178 272 1252 316" stroke="url(#robotics-blue)" stroke-width="66"/>
+    </g>
+    <path d="M1062 652 930 430 1176 245 1263 296" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="url(#robotics-surface)" stroke="#a9bec9" stroke-width="3">
+      <circle cx="1090" cy="662" r="49"/>
+      <circle cx="958" cy="432" r="45"/>
+      <circle cx="1178" cy="272" r="35"/>
+    </g>
+    <g fill="var(--fg)">
+      <circle cx="1090" cy="662" r="19"/>
+      <circle cx="958" cy="432" r="16"/>
+    </g>
+    <circle cx="1178" cy="272" r="12" fill="var(--accent)"/>
+    <path d="M1241 331 1247 365 1275 379M1263 301 1296 304 1317 328" fill="none" stroke="var(--fg)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1139 662H1350V895H415V773M401 790 415 773 429 790"/>
+    </g>
+    <circle cx="1350" cy="662" r="9" fill="var(--accent)"/>
+    <text x="795" y="866" fill="var(--fg)" font-size="49" font-weight="400">Feedback</text>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="mfcp-zephyr-title mfcp-zephyr-description">
+  <title id="mfcp-zephyr-title">Zephyr board support and target verification</title>
+  <desc id="mfcp-zephyr-description">Board support, drivers and a sample program connect to a conceptual embedded development board with a microcontroller, pin headers and peripheral traces. A signal below the board represents verification on the target. This is an original conceptual illustration, not a particular board model or a measured test result.</desc>
+  <defs>
+    <linearGradient id="mfcp-zephyr-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="mfcp-zephyr-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="mfcp-zephyr-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="mfcp-zephyr-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mfcp-zephyr-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="mfcp-zephyr-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <text x="140" y="176" font-size="64" font-weight="500" fill="#17232b">Zephyr</text>
+    <g fill="none" stroke="#a9bec9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M522 370H608V432H704M522 652H608V578H704"/>
+      <path d="M686 418L704 432 686 446M686 564L704 578 686 592"/>
+      <path d="M1054 754V816"/>
+      <path d="M1040 798L1054 816 1068 798"/>
+    </g>
+
+    <path d="M162 268H438L522 352V460Q522 482 500 482H162Q140 482 140 460V290Q140 268 162 268Z" fill="url(#mfcp-zephyr-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#mfcp-zephyr-panel-shadow)"/>
+    <path d="M438 268V352H522" fill="url(#mfcp-zephyr-blue)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M164 272H434" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="188" y="358" font-size="56" font-weight="500" fill="#17232b">BSP</text>
+    <text x="188" y="428" font-size="44" font-weight="400" fill="#53616a">Drivers</text>
+
+    <path d="M162 562H438L522 646V746Q522 768 500 768H162Q140 768 140 746V584Q140 562 162 562Z" fill="url(#mfcp-zephyr-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#mfcp-zephyr-panel-shadow)"/>
+    <path d="M438 562V646H522" fill="url(#mfcp-zephyr-surface)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M164 566H434" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="188" y="650" font-size="56" font-weight="500" fill="#17232b">Sample</text>
+    <path d="M210 694L192 710 210 726M264 694L282 710 264 726M242 690L230 730" fill="none" stroke="#b64926" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M732 256H1376Q1404 256 1404 284V724Q1404 752 1376 752H732Q704 752 704 724V574H724V434H704V284Q704 256 732 256Z" fill="url(#mfcp-zephyr-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#mfcp-zephyr-surface-shadow)"/>
+    <path d="M732 256H1376Q1404 256 1404 284V724Q1404 752 1376 752H732Q704 752 704 724V574H724V434H704V284Q704 256 732 256Z" fill="url(#mfcp-zephyr-light)"/>
+    <path d="M736 260H1372" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#fff" stroke="#a9bec9" stroke-width="3">
+      <circle cx="744" cy="296" r="11"/>
+      <circle cx="1364" cy="296" r="11"/>
+      <circle cx="744" cy="712" r="11"/>
+      <circle cx="1364" cy="712" r="11"/>
+    </g>
+    <text x="1054" y="342" text-anchor="middle" font-size="56" font-weight="500" fill="#17232b">Target board</text>
+
+    <g fill="none" stroke="#a9bec9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M982 432V398H840V432M982 566V604H832V660M1122 432V398H1264V432M1122 566V604H1272V660"/>
+      <path d="M952 466H824V510H780M952 536H858V580H780M1152 466H1224V482H1324M1152 536H1248V550H1324"/>
+    </g>
+    <rect x="952" y="432" width="200" height="134" rx="12" fill="url(#mfcp-zephyr-surface)" stroke="#274b61" stroke-width="4"/>
+    <path d="M968 436H1136" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round">
+      <path d="M980 432V416M1016 432V416M1052 432V416M1088 432V416M1124 432V416M980 566V582M1016 566V582M1052 566V582M1088 566V582M1124 566V582M952 458H936M952 498H936M952 538H936M1152 458H1168M1152 498H1168M1152 538H1168"/>
+    </g>
+    <text x="1052" y="520" text-anchor="middle" font-size="50" font-weight="500" fill="#17232b">MCU</text>
+    <rect x="762" y="470" width="56" height="70" rx="7" fill="url(#mfcp-zephyr-surface)" stroke="#a9bec9" stroke-width="3"/>
+    <rect x="1288" y="452" width="52" height="32" rx="6" fill="url(#mfcp-zephyr-warm)" stroke="#b64926" stroke-opacity=".4" stroke-width="3"/>
+    <circle cx="1314" cy="550" r="15" fill="#b64926" fill-opacity=".65"/>
+    <rect x="788" y="650" width="532" height="38" rx="8" fill="url(#mfcp-zephyr-surface)" stroke="#a9bec9" stroke-width="3"/>
+    <g fill="#274b61" fill-opacity=".75">
+      <circle cx="820" cy="669" r="6"/><circle cx="872" cy="669" r="6"/><circle cx="924" cy="669" r="6"/><circle cx="976" cy="669" r="6"/><circle cx="1028" cy="669" r="6"/><circle cx="1080" cy="669" r="6"/><circle cx="1132" cy="669" r="6"/><circle cx="1184" cy="669" r="6"/><circle cx="1236" cy="669" r="6"/><circle cx="1288" cy="669" r="6"/>
+    </g>
+    <path d="M742 866H780V842H812V882H844V842H876V866H910" fill="none" stroke="#b64926" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="952" y="878" font-size="44" font-weight="400" fill="#53616a">Target verification</text>
+  </g>
+</svg>

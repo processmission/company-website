@@ -22,6 +22,7 @@ description: 公司静态官网的架构、维护约定与验证入口
 | 路径 | 维护职责 |
 | --- | --- |
 | `src/content/` | 产品、行业、栏目、MFCP、共享信息及分段正文；优先在此修改文案 |
+| `src/assets/` | 本地插画源文件，交由 Astro 优化并生成发布资源 |
 | `src/data/` | collection 派生数据与共享导航配置，不维护重复正文 |
 | `src/pages/`、`src/layouts/`、`src/components/` | 静态路由、公共页面结构与展示组件 |
 | `src/styles/`、`src/scripts/` | 主题与导航样式、原生浏览器交互及生命周期 |
@@ -56,6 +57,7 @@ SITE_URL=https://processmission.github.io SITE_BASE=/company-website npm run pre
 - 沿用两空格缩进、JS/TS 单引号与分号、HTML 属性双引号。Astro 组件使用 PascalCase 文件名，内容 slug 使用小写/kebab-case；不顺手重排或格式化无关代码。
 - Astro frontmatter 使用顶层 `await` 读取和渲染内容；动态详情使用 `CollectionEntry` 和 typed `Props`。依赖通过 ESM import 与 Props 传递，没有 DI container 或 UI framework；优先复用现有组件、schema 和 helper。
 - 保留 Markdown 中已有 class、id 和容器配对；不要把列表后的 HTML 缩进成列表内容。schema 是内容校验边界，不用空值 fallback 掩盖缺失条目或错误关联；未知公开资料使用 `ContentPlaceholder.astro`，不编造联系方式、客户、资质、账号或认证结论。
+- 产品和行业配图通过 frontmatter 的 `image` / `imageAlt` 与原生 `image()` schema 关联，模板使用 `astro:assets` 的 `Image`；Markdown 正文使用标准图片语法引用 `src/assets/`，不热链图片或将源文件路径直接传给 HTML `img`。插图以 [SystemDiagram](src/components/SystemDiagram.astro) 和[行业 OS SVG](src/assets/site/os.svg) 的浅色渐变、边缘高光、柔和阴影为渲染基准，保留透明外底、图内 Helvetica Neue / Arial 字体和适度留白，各图按主题组织内容，不机械复制同一构图。
 - 导航状态集中在 `src/scripts/navigation.ts` 的 `Map` 和 `setOpen()`；事件通过 `AbortController` 清理。保留 `astro:before-swap` 清理、`astro:page-load` 重绑及动画取消，避免连续切页后积累监听器；不要另建状态层。
 - 保持现有浅色主题、系统字体 fallback、原生 `details` / `summary`、键盘和 reduced-motion 行为；不要将内容调整扩展为视觉重设计。
 

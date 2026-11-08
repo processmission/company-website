@@ -11,7 +11,7 @@ description: "进程使命发起的开源贡献者成长计划，在导师指导
 <div class="mfcp-projects">
 <article class="mfcp-project">
 
-![Zephyr：参考 nRF52840 DK 绘制的开发板插图](../../assets/mfcp/zephyr.png)
+![Zephyr 板级支持、驱动与示例连接目标板并进行验证的概念图](../../assets/mfcp/zephyr.svg)
 
 ### [Zephyr](https://github.com/missionhub-oss/mfcp/blob/main/projects/zephyr/README.md)
 
@@ -20,7 +20,7 @@ description: "进程使命发起的开源贡献者成长计划，在导师指导
 </article>
 <article class="mfcp-project">
 
-![Linux：企鹅、处理器与电路走线插图](../../assets/mfcp/linux.png)
+![Linux 内核与驱动开发、openRuyi 软件包及 RISC-V 目标验证的概念图](../../assets/mfcp/linux.svg)
 
 ### [Linux](https://github.com/missionhub-oss/mfcp/blob/main/projects/linux/README.md)
 
@@ -29,7 +29,7 @@ description: "进程使命发起的开源贡献者成长计划，在导师指导
 </article>
 <article class="mfcp-project">
 
-![Yocto Project：蓝色山峦背景下的嵌入式设备插图](../../assets/mfcp/yocto.png)
+![Yocto Project 配方与软件层构建目标嵌入式 Linux 镜像的流程图](../../assets/mfcp/yocto.svg)
 
 ### [Yocto Project](https://github.com/missionhub-oss/mfcp/blob/main/projects/yocto/README.md)
 
@@ -38,7 +38,7 @@ description: "进程使命发起的开源贡献者成长计划，在导师指导
 </article>
 <article class="mfcp-project">
 
-![Humanize：终端与编程、审查、验证面板的立体插图](../../assets/mfcp/humanize.png)
+![人工主导的编程 Agent 协作，以及命令行、桌面工具和评审验证的流程图](../../assets/mfcp/humanize.svg)
 
 ### [Humanize](https://github.com/missionhub-oss/mfcp/blob/main/projects/humanize/README.md)
 
@@ -75,7 +75,7 @@ description: "进程使命发起的开源贡献者成长计划，在导师指导
 </div>
 <div class="mfcp-credit">
 
-插图来自 MFCP 官方仓库，遵循 [MIT 许可](../../mfcp/LICENSE.txt)。
+插图依据 MFCP 项目说明重绘，原始图文遵循 [MIT 许可](../../mfcp/LICENSE.txt)。
 
 </div>
 </section>

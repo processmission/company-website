@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="mfcp-linux-title mfcp-linux-description">
+  <title id="mfcp-linux-title">Linux kernel, packages and RISC-V validation</title>
+  <desc id="mfcp-linux-description">A driver source file connects to a Linux kernel represented by a processor-shaped software block. A separate openRuyi package and the kernel connect to a conceptual RISC-V target for system validation. These depict the project's different contribution practices, not a mandatory software stack, a particular device or completed validation results.</desc>
+  <defs>
+    <linearGradient id="mfcp-linux-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="mfcp-linux-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="mfcp-linux-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="mfcp-linux-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mfcp-linux-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="mfcp-linux-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <text x="140" y="176" font-size="64" font-weight="500" fill="#17232b">Linux</text>
+    <g fill="none" stroke="#a9bec9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M440 448H532M768 594V732M1372 432H1404V822H1116"/>
+      <path d="M514 434L532 448 514 462M754 714L768 732 782 714M1134 808L1116 822 1134 836"/>
+    </g>
+
+    <path d="M162 300H362L440 378V548Q440 570 418 570H162Q140 570 140 548V322Q140 300 162 300Z" fill="url(#mfcp-linux-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#mfcp-linux-panel-shadow)"/>
+    <path d="M362 300V378H440" fill="url(#mfcp-linux-blue)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M164 304H358" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="180" y="422" font-size="56" font-weight="500" fill="#17232b">Drivers</text>
+    <path d="M212 468L188 492 212 516M320 468L344 492 320 516M280 460L252 524" fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="560" y="278" width="416" height="288" rx="24" fill="url(#mfcp-linux-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#mfcp-linux-surface-shadow)"/>
+    <rect x="562" y="280" width="412" height="284" rx="22" fill="url(#mfcp-linux-light)"/>
+    <path d="M588 282H948" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round">
+      <path d="M604 278V250M668 278V250M732 278V250M804 278V250M868 278V250M932 278V250M604 566V594M668 566V594M732 566V594M804 566V594M868 566V594M932 566V594M560 322H532M560 386H532M560 450H532M560 522H532M976 322H1004M976 386H1004M976 450H1004M976 522H1004"/>
+    </g>
+    <text x="768" y="388" text-anchor="middle" font-size="62" font-weight="500" fill="#17232b">Kernel</text>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M668 444L644 468 668 492M868 444L892 468 868 492M792 434L744 502"/>
+      <path d="M708 458H722M810 478H824" stroke="#b64926"/>
+    </g>
+
+    <rect x="1100" y="310" width="272" height="244" rx="16" fill="url(#mfcp-linux-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#mfcp-linux-panel-shadow)"/>
+    <path d="M1120 314H1352" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1102 370H1370M1206 312V402H1266V312" fill="url(#mfcp-linux-surface)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="1160" y="446" width="152" height="56" rx="8" fill="#fff" fill-opacity=".75" stroke="#cad4d9" stroke-width="3"/>
+    <path d="M1182 474H1290" fill="none" stroke="#b64926" stroke-opacity=".6" stroke-width="4" stroke-linecap="round"/>
+    <text x="1236" y="626" text-anchor="middle" font-size="56" font-weight="500" fill="#17232b">openRuyi</text>
+    <text x="1236" y="686" text-anchor="middle" font-size="44" font-weight="400" fill="#53616a">Packages</text>
+
+    <rect x="420" y="734" width="696" height="178" rx="20" fill="url(#mfcp-linux-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#mfcp-linux-panel-shadow)"/>
+    <path d="M444 738H1092" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <rect x="476" y="784" width="88" height="78" rx="9" fill="url(#mfcp-linux-blue)" stroke="#274b61" stroke-width="4"/>
+    <g fill="none" stroke="#274b61" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M494 784V770M520 784V770M546 784V770M494 862V876M520 862V876M546 862V876M476 804H462M476 842H462M564 804H578M564 842H578"/>
+      <path d="M500 838V808H526L538 820V838"/>
+    </g>
+    <text x="624" y="806" font-size="56" font-weight="500" fill="#17232b">RISC-V</text>
+    <text x="624" y="869" font-size="44" font-weight="400" fill="#53616a">System validation</text>
+  </g>
+</svg>

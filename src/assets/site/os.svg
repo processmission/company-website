@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="os-title os-description">
+  <title id="os-title">Industry OS components and system delivery</title>
+  <desc id="os-description">Applications and industry interfaces connect to Linux and Zephyr runtimes. Board support and drivers adapt the system to target hardware. The assembled delivery includes a system image and runtime configuration. Runtime selection, interfaces, hardware adaptation and validation are defined by each project; this illustration does not imply all capabilities are installed by default.</desc>
+  <defs>
+    <linearGradient id="os-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="os-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="os-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="os-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="os-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="os-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif">
+    <g fill="none" stroke="#a9bec9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M532 340H650M532 690H650"/>
+      <path d="M632 326L650 340 632 354M632 676L650 690 632 704"/>
+    </g>
+
+    <rect x="132" y="156" width="400" height="280" rx="22" fill="url(#os-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#os-panel-shadow)"/>
+    <rect x="132" y="550" width="400" height="280" rx="22" fill="url(#os-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#os-panel-shadow)"/>
+    <g fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round">
+      <path d="M156 160H508M156 554H508"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="332" y="238" font-size="56" font-weight="500" fill="#17232b">Applications</text>
+      <text x="332" y="300" font-size="44" font-weight="400" fill="#53616a">Industry interfaces</text>
+      <text x="332" y="734" font-size="56" font-weight="500" fill="#17232b">BSP / Drivers</text>
+      <text x="332" y="792" font-size="44" font-weight="400" fill="#53616a">Board adaptation</text>
+    </g>
+    <g fill="none" stroke="#274b61" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="214" y="344" width="44" height="44" rx="7"/>
+      <rect x="286" y="344" width="44" height="44" rx="7"/>
+      <path d="M352 348H400V384H352M400 356H430M400 376H430"/>
+      <rect x="258" y="594" width="148" height="70" rx="10"/>
+      <path d="M282 594V580M308 594V580M356 594V580M382 594V580M282 664V678M308 664V678M356 664V678M382 664V678M258 616H242M258 642H242M406 616H422M406 642H422"/>
+    </g>
+    <rect x="316" y="612" width="32" height="34" rx="5" fill="#274b61"/>
+    <path d="M356 630H382" stroke="#b64926" stroke-width="6" stroke-linecap="round"/>
+
+    <path d="M674 148H958L1000 194H1380Q1404 194 1404 218V852Q1404 876 1380 876H674Q650 876 650 852V172Q650 148 674 148Z" fill="url(#os-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#os-surface-shadow)"/>
+    <path d="M674 148H958L1000 194H1380Q1404 194 1404 218V852Q1404 876 1380 876H674Q650 876 650 852V172Q650 148 674 148Z" fill="url(#os-light)"/>
+    <path d="M676 152H954L997 198H1378" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="704" y="266" font-size="62" font-weight="500" fill="#17232b">Industry OS</text>
+
+    <rect x="694" y="316" width="310" height="244" rx="20" fill="url(#os-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#os-panel-shadow)"/>
+    <rect x="1048" y="316" width="310" height="244" rx="20" fill="url(#os-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#os-panel-shadow)"/>
+    <path d="M716 320H982M1070 320H1336" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <g text-anchor="middle">
+      <g font-size="56" font-weight="500" fill="#17232b">
+        <text x="849" y="398">Linux</text>
+        <text x="1203" y="398">Zephyr</text>
+      </g>
+      <g font-size="44" font-weight="400" fill="#53616a">
+        <text x="849" y="458">Apps / AI</text>
+        <text x="1203" y="458">Control</text>
+      </g>
+    </g>
+    <g fill="#b64926" fill-opacity=".65">
+      <rect x="755" y="508" width="24" height="20" rx="3"/>
+      <rect x="795" y="488" width="24" height="40" rx="3"/>
+      <rect x="835" y="498" width="24" height="30" rx="3"/>
+      <rect x="875" y="480" width="24" height="48" rx="3"/>
+      <rect x="915" y="498" width="24" height="30" rx="3"/>
+    </g>
+    <path d="M1109 520H1140V488H1171V520H1202V488H1233V520H1264V488H1295" fill="none" stroke="#274b61" stroke-width="5" stroke-linejoin="round"/>
+
+    <path d="M694 614H1358" stroke="#cad4d9" stroke-width="3"/>
+    <path d="M710 668H764L792 696V774H710Z" fill="url(#os-blue)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M764 668V696H792M730 728H771M730 749H759" fill="none" stroke="#274b61" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="832" y="714" font-size="56" font-weight="500" fill="#17232b">System image</text>
+    <text x="832" y="776" font-size="44" font-weight="400" fill="#53616a">Runtime config</text>
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="architecture-title architecture-description" style="--fg:#274b61;--muted:#17232b;--border:#cad4d9;--surface:#e8f0f4;--accent:#b64926">
+  <title id="architecture-title">Linux and Zephyr on a shared computing platform</title>
+  <desc id="architecture-description">Linux runs applications and AI, while Zephyr handles real-time control. Hypervisor provides isolation and resource management above shared hardware.</desc>
+  <defs>
+    <linearGradient id="home-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="home-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="home-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <radialGradient id="home-light" cx="25%" cy="0%" r="85%">
+      <stop stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="home-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="home-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <rect x="132" y="120" width="610" height="340" rx="20" fill="url(#home-warm)" stroke="#b64926" stroke-opacity=".3" stroke-width="3" filter="url(#home-panel-shadow)"/>
+    <rect x="794" y="120" width="610" height="340" rx="20" fill="url(#home-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#home-panel-shadow)"/>
+    <path d="M156 124H718M818 124H1380" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <path d="M768 132V448" fill="none" stroke="var(--accent)" stroke-width="5"/>
+
+    <g fill="var(--muted)" font-weight="500" font-size="69">
+      <text x="437" y="194">Linux</text>
+      <text x="1099" y="194">Zephyr</text>
+    </g>
+    <g fill="var(--fg)" font-weight="400" font-size="51">
+      <text x="437" y="262">Applications / AI</text>
+      <text x="1099" y="262">Real-time Control</text>
+    </g>
+
+    <g transform="translate(0,-16)">
+    <g fill="none" stroke="var(--fg)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M268 342H326V392H440M268 392H440M268 442H326V392"/>
+      <path d="M854 380H892V334H948V406H1004V334H1060V406H1116V380H1172"/>
+      <path d="M1192 326V309M1222 326V309M1252 326V309M1192 426V443M1222 426V443M1252 426V443M1172 346H1155M1172 376H1155M1172 406H1155M1272 346H1289M1272 376H1289M1272 406H1289"/>
+    </g>
+    <rect x="230" y="324" width="38" height="36" rx="7" fill="var(--fg)"/>
+    <rect x="230" y="374" width="38" height="36" rx="7" fill="var(--accent)"/>
+    <rect x="230" y="424" width="38" height="36" rx="7" fill="var(--fg)"/>
+    <rect x="440" y="324" width="180" height="138" rx="14" fill="var(--fg)"/>
+    <g fill="var(--surface)">
+      <rect x="461" y="345" width="58" height="38" rx="6"/>
+      <rect x="541" y="345" width="58" height="38" rx="6"/>
+      <rect x="461" y="403" width="58" height="38" rx="6"/>
+      <rect x="541" y="403" width="58" height="38" rx="6"/>
+    </g>
+    <rect x="1172" y="326" width="100" height="100" rx="10" fill="var(--fg)"/>
+    </g>
+
+    <g fill="none" stroke="var(--fg)" stroke-width="8">
+      <path d="M437 460V558M1099 460V558"/>
+      <path d="M370 728V828M768 728V828M1166 728V828"/>
+    </g>
+    <g fill="var(--accent)">
+      <rect x="419" y="541" width="36" height="12" rx="3"/>
+      <rect x="1081" y="541" width="36" height="12" rx="3"/>
+      <rect x="352" y="810" width="36" height="12" rx="3"/>
+      <rect x="750" y="810" width="36" height="12" rx="3"/>
+      <rect x="1148" y="810" width="36" height="12" rx="3"/>
+    </g>
+
+    <rect x="132" y="558" width="1272" height="170" rx="14" fill="url(#home-blue)" stroke="#b4c6d0" stroke-width="3" filter="url(#home-surface-shadow)"/>
+    <rect x="134" y="560" width="1268" height="166" rx="12" fill="url(#home-light)"/>
+    <path d="M150 562H1386" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="var(--muted)">
+      <text x="768" y="626" font-size="62" font-weight="500">Hypervisor</text>
+      <text x="768" y="696" font-size="50" font-weight="400">Isolation &amp; Resource Management</text>
+    </g>
+
+    <rect x="132" y="828" width="1272" height="100" rx="14" fill="url(#home-surface)" stroke="var(--border)" stroke-width="3" filter="url(#home-panel-shadow)"/>
+    <path d="M150 832H1386" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round">
+      <rect x="325" y="853" width="50" height="50" rx="7"/>
+      <path d="M337 853V843M350 853V843M363 853V843M337 903V913M350 903V913M363 903V913M325 865H315M325 878H315M325 891H315M375 865H385M375 878H385M375 891H385"/>
+    </g>
+    <text x="837" y="898" font-size="56" font-weight="500" fill="var(--muted)">Shared Hardware</text>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="space-title space-description" style="--fg:#274b61;--muted:#17232b;--border:#b9ccd7;--surface:#e8f0f4;--accent:#b64926">
+  <title id="space-title">Satellite with redundant computing and fault recovery</title>
+  <desc id="space-description">A conceptual flat-view satellite with two solar arrays connects to two mission and control compute replicas. A return path shows predefined fault recovery between replicas, without implying a deployed system or a reliability guarantee.</desc>
+  <defs>
+    <linearGradient id="space-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="space-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <filter id="space-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="space-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <g fill="none" stroke="var(--fg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M560 335H650M886 335H976M768 212V175"/>
+      <path d="M711 136Q768 215 825 136"/>
+    </g>
+    <g fill="url(#space-blue)" stroke="#a9bec9" stroke-width="3" stroke-linejoin="round" filter="url(#space-surface-shadow)">
+      <rect x="194" y="252" width="366" height="180" rx="6"/>
+      <rect x="976" y="252" width="366" height="180" rx="6"/>
+      <rect x="650" y="212" width="236" height="242" rx="17" fill="url(#space-warm)" stroke="#cad4d9"/>
+    </g>
+    <path d="M204 256H550M986 256H1332M670 216H866" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke="var(--border)" stroke-width="3">
+      <path d="M285 255V429M377 255V429M469 255V429M197 342H557M1067 255V429M1159 255V429M1251 255V429M979 342H1339"/>
+    </g>
+    <rect x="700" y="262" width="136" height="118" rx="12" fill="var(--fg)"/>
+    <g fill="var(--surface)">
+      <rect x="723" y="285" width="34" height="28" rx="4"/>
+      <rect x="779" y="285" width="34" height="28" rx="4"/>
+      <rect x="723" y="335" width="90" height="22" rx="4"/>
+    </g>
+    <path d="M724 416H812M744 454 735 479H801L792 454" fill="url(#space-blue)" stroke="var(--fg)" stroke-width="4" stroke-linejoin="round"/>
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linejoin="round">
+      <path d="M768 480V526M418 640V526H1118V640"/>
+    </g>
+    <circle cx="768" cy="526" r="9" fill="var(--accent)"/>
+    <text x="768" y="598" fill="var(--fg)" font-size="49" font-weight="400">Redundant compute</text>
+    <rect x="168" y="640" width="500" height="200" rx="18" fill="url(#space-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#space-panel-shadow)"/>
+    <rect x="868" y="640" width="500" height="200" rx="18" fill="url(#space-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#space-panel-shadow)"/>
+    <path d="M190 644H646M890 644H1346" fill="none" stroke="#fff" stroke-opacity=".95" stroke-width="3" stroke-linecap="round"/>
+    <g fill="var(--muted)" font-size="58" font-weight="500">
+      <text x="418" y="715">Replica A</text>
+      <text x="1118" y="715">Replica B</text>
+    </g>
+    <g fill="var(--fg)" font-size="48" font-weight="400">
+      <text x="418" y="787">Mission / control</text>
+      <text x="1118" y="787">Mission / control</text>
+    </g>
+    <g fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M418 840V916H1118V852"/>
+      <path d="M1104 869 1118 852 1132 869"/>
+    </g>
+    <text x="768" y="888" fill="var(--fg)" font-size="48" font-weight="400">Fault recovery</text>
+  </g>
+</svg>

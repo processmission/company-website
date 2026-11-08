@@ -26,6 +26,8 @@ const relatedProducts = await getEntries(industry.recommendations.map(({ product
   <PageHeading
     title={industry.heading}
     description={industry.summary}
+    image={industry.image}
+    imageAlt={industry.imageAlt}
   />
   <div class="container section industry-detail">
     <Content />
@@ -48,13 +50,20 @@ const relatedProducts = await getEntries(industry.recommendations.map(({ product
 </BaseLayout>
 
 <style>
-  .industry-detail :global(.detail-benefits) { display: block; }
-  .industry-detail :global(.detail-benefits > ul) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
-  .industry-detail :global(.detail-list > ul) { margin: 0; padding: 0; }
-  .related-products { margin-top: 1rem; }
+  .industry-detail { gap: 2rem; }
+  .industry-detail :global(.detail-runtime) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .industry-detail :global(.detail-runtime > div),
+  .industry-detail :global(.detail-interface),
+  .industry-detail :global(.detail-delivery > div) { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+  .industry-detail :global(.detail-runtime > div:last-child) { grid-column: auto; }
+  .industry-detail :global(.detail-hardware) { padding: 0; border: 0; }
+  .industry-detail :global(.detail-interface) { margin-top: 1rem; }
+  .industry-detail :global(.detail-boundary) { margin-top: 0; }
+  .related-products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; margin-top: 1rem; padding: 0; list-style: none; }
+  .related-products li + li { margin-top: 0; }
   .related-products h3 { font-size: 1rem; }
   .related-products .text-link { margin-top: 0; }
   @media (max-width: 600px) {
-    .industry-detail :global(.detail-benefits > ul) { grid-template-columns: 1fr; }
+    .industry-detail :global(.detail-runtime), .related-products { grid-template-columns: 1fr; }
   }
 </style>

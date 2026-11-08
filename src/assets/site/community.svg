@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="community-title community-description" style="--fg:#274b61;--muted:#17232b;--border:#b9ccd7;--surface:#e8f0f4;--accent:#b64926">
+  <title id="community-title">MissionHub source collaboration and shared modules</title>
+  <desc id="community-description">Developer source contributions pass through review into shared system modules. A return path represents reuse and further contributions, rather than a real repository interface.</desc>
+  <defs>
+    <linearGradient id="community-blue" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#e8f0f4"/>
+    </linearGradient>
+    <linearGradient id="community-warm" x1="0" y1="0" x2="100%" y2="100%">
+      <stop stop-color="#fff"/>
+      <stop offset=".75" stop-color="#fbf1ec"/>
+    </linearGradient>
+    <linearGradient id="community-surface" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f5f6"/>
+    </linearGradient>
+    <filter id="community-panel-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="22" flood-color="#274b61" flood-opacity=".06"/>
+    </filter>
+    <filter id="community-surface-shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#274b61" flood-opacity=".06"/>
+      <feDropShadow dx="0" dy="32" stdDeviation="36" flood-color="#274b61" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <g font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <text x="768" y="182" fill="var(--muted)" font-size="64" font-weight="500">MissionHub</text>
+
+    <g fill="none" stroke="var(--fg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M240 310V510M240 440C240 386 398 408 398 350V310"/>
+      <path d="M296 310H346" stroke="var(--border)"/>
+    </g>
+    <g fill="url(#community-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#community-panel-shadow)">
+      <circle cx="240" cy="310" r="26"/>
+      <circle cx="240" cy="510" r="26"/>
+      <circle cx="398" cy="310" r="26"/>
+    </g>
+    <circle cx="240" cy="410" r="20" fill="var(--accent)"/>
+    <path d="M189 364L159 394L189 424M449 364L479 394L449 424" fill="none" stroke="var(--fg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M512 410H602M581 389L602 410L581 431"/>
+      <path d="M928 410H1018M997 389L1018 410L997 431"/>
+    </g>
+
+    <rect x="650" y="275" width="202" height="246" rx="12" fill="url(#community-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#community-panel-shadow)"/>
+    <path d="M666 279H836" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M686 309H829L872 352V544H686Z" fill="url(#community-surface)" stroke="#cad4d9" stroke-width="3" stroke-linejoin="round" filter="url(#community-surface-shadow)"/>
+    <path d="M690 313H827" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M829 309V352H872M719 384H809M719 420H786M719 456H762" fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M795 442H895V503H845L818 527V503H795Z" fill="url(#community-warm)" stroke="#b64926" stroke-opacity=".5" stroke-width="3" stroke-linejoin="round" filter="url(#community-panel-shadow)"/>
+    <path d="M799 446H891" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M814 465H875M814 483H852" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+
+    <g fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1214 379V414M1118 414H1310M1118 414V451M1310 414V451"/>
+    </g>
+    <rect x="1140" y="278" width="148" height="101" rx="12" fill="url(#community-blue)" stroke="#a9bec9" stroke-width="3" filter="url(#community-panel-shadow)"/>
+    <path d="M1156 282H1272" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="url(#community-surface)" stroke="#cad4d9" stroke-width="3" filter="url(#community-panel-shadow)">
+      <rect x="1046" y="451" width="144" height="100" rx="12"/>
+      <rect x="1238" y="451" width="144" height="100" rx="12"/>
+    </g>
+    <path d="M1062 455H1174M1254 455H1366" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1177 315H1251M1177 341H1227" stroke="var(--fg)"/>
+      <path d="M1080 487H1156M1080 515H1132M1272 487H1348M1272 515H1324" stroke="var(--fg)"/>
+    </g>
+
+    <g fill="var(--muted)" font-size="56" font-weight="500">
+      <text x="319" y="628">Developer</text>
+      <text x="319" y="693">Source</text>
+      <text x="768" y="628">Review</text>
+      <text x="1214" y="628">Shared</text>
+      <text x="1214" y="693">Modules</text>
+    </g>
+
+    <path d="M1214 744V790H319V744M298 765L319 744L340 765" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="768" y="898" fill="var(--fg)" font-size="50" font-weight="400">Contribute &amp; Reuse</text>
+  </g>
+</svg>

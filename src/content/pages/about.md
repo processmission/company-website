@@ -8,6 +8,8 @@ company:
   mission: 调度一次进程，承载一份使命。
 heading: 关于我们
 eyebrow: 关于进程使命
+image: ../../assets/site/home-platform-flat.svg
+imageAlt: 混合关键性平台示意插画：复杂应用域与确定性控制域共享硬件并保持隔离
 sections:
   - id: contact
     title: 联系我们
@@ -19,26 +21,21 @@ sections:
     title: 公司动态
     items:
       - title: 新闻与活动
-        needed: 经审核可公开的新闻与活动标题、日期、正文及来源
+        needed: 可公开的新闻与活动标题、日期、正文和来源
   - id: careers
     title: 加入我们
     items:
       - title: 岗位信息
-        needed: 确认可公开的岗位名称、职责、工作地点及投递渠道
+        needed: 正式岗位、职责、工作地点与投递渠道
   - id: partners
     title: 合作伙伴
     items:
       - title: 合作信息
-        needed: 获得展示授权的合作伙伴名称、标识及合作范围
+        needed: 已获展示授权的伙伴名称、标识与合作范围
   - id: qualifications
     title: 资质信息
     items:
       - title: 资质资料
-        needed: 实际资质名称、适用范围、颁发机构、有效期及可公开的证明材料
+        needed: 实际资质、适用范围、颁发机构、有效期与公开证明
 ---
 创始团队来自风河 VxWorks 核心研发团队，聚焦关键任务系统的运行基础、工程交付与长期演进。
-
-<dl class="company-focus">
-  <div><dt>技术方向</dt><dd>混合关键性计算</dd></div>
-  <div><dt>工程目标</dt><dd>可验证、可追溯、可维护</dd></div>
-</dl>

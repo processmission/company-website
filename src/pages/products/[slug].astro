@@ -22,7 +22,7 @@ const product = entry.data;
 ---
 
 <BaseLayout title={`${product.title}｜进程使命`} description={product.summary}>
-  <PageHeading title={product.title} description={product.summary} />
+  <PageHeading title={product.title} description={product.summary} image={product.image} imageAlt={product.imageAlt} />
   <div class="container section industry-detail">
     <Content />
 
